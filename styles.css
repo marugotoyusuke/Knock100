@@ -28,6 +28,7 @@ body {
   color: var(--ink);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   line-height: 1.75;
+  line-break: strict;
 }
 
 a {
@@ -153,19 +154,21 @@ p {
 }
 
 h1 {
-  max-width: 9em;
+  max-width: 8em;
   margin-bottom: 30px;
-  font-size: clamp(58px, 10vw, 148px);
+  font-size: clamp(48px, 8vw, 112px);
   font-weight: 950;
-  line-height: 0.92;
+  line-height: 1.02;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .lead {
   max-width: 760px;
   margin: 0;
-  font-size: clamp(17px, 2vw, 24px);
+  font-size: clamp(16px, 1.7vw, 21px);
   font-weight: 700;
+  line-height: 1.85;
 }
 
 .hero-panel {
@@ -209,9 +212,10 @@ h1 {
 
 .section-heading h2 {
   margin: 0;
-  font-size: clamp(28px, 4vw, 58px);
+  font-size: clamp(28px, 3.2vw, 48px);
   font-weight: 950;
-  line-height: 1.02;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .stats-grid {
@@ -387,16 +391,16 @@ progress::-webkit-progress-value {
 
 .problem-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
 }
 
 .problem-card,
 .answer-card {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  min-height: 280px;
-  padding: 20px;
+  min-height: 240px;
+  padding: 18px;
   border: 2px solid var(--line);
   background: var(--paper);
 }
@@ -414,10 +418,13 @@ progress::-webkit-progress-value {
 .problem-meta {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-size: 12px;
   font-weight: 950;
+  line-height: 1.35;
 }
 
 .problem-number {
@@ -433,16 +440,25 @@ progress::-webkit-progress-value {
 
 .problem-card h3,
 .answer-card h3 {
-  margin-bottom: 14px;
-  font-size: clamp(20px, 2vw, 28px);
+  margin-bottom: 10px;
+  font-size: clamp(19px, 1.45vw, 23px);
   font-weight: 950;
-  line-height: 1.15;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .problem-card p,
 .answer-card p {
-  margin-bottom: 22px;
-  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.problem-card p code,
+.answer-card p code {
+  white-space: nowrap;
 }
 
 .answer-hero h1 {
@@ -618,7 +634,7 @@ progress::-webkit-progress-value {
   }
 
   h1 {
-    font-size: 54px;
+    font-size: 44px;
   }
 
   .filters {
