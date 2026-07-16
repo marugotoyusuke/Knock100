@@ -1,0 +1,3886 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基礎プロ 100本ノック 回答コード</title>
+  <meta name="description" content="基礎プロ 100本ノックの回答コード例。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="問題ページへ">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>KAMIYAMA<br>MARUGOTO<br>KOSEN</span>
+    </a>
+    <nav class="top-nav" aria-label="ページナビゲーション">
+      <a href="./index.html">問題</a>
+      <a href="#answers">回答コード</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero answer-hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">C LANGUAGE PRACTICE / ANSWERS</p>
+        <h1 id="page-title">回答コード</h1>
+        <p class="lead">100本ノックの回答例です。答えは1つではないので、まず自分で書いてから、考え方や書き方の確認に使ってください。</p>
+      </div>
+      <div class="hero-panel" aria-label="回答数">
+        <span>CODE</span>
+        <strong>100</strong>
+        <small>ANSWERS</small>
+      </div>
+    </section>
+
+    <section class="workspace" id="answers" aria-labelledby="answers-title">
+      <aside class="control-panel">
+        <div>
+          <p class="panel-label">ANSWERS</p>
+          <strong>100</strong>
+        </div>
+        <div>
+          <label class="panel-label" for="search">SEARCH</label>
+          <input id="search" type="search" placeholder="例: 配列, switch, No. 52">
+        </div>
+        <div class="filters" aria-label="カテゴリで絞り込み">
+          <button class="filter-button active" type="button" data-filter="all"><span>すべて</span><small>100問</small></button>
+          <button class="filter-button" type="button" data-filter="超基礎"><span>超基礎</span><small>表示・変数・計算・入力</small></button>
+<button class="filter-button" type="button" data-filter="条件分岐"><span>条件分岐</span><small>if / else</small></button>
+<button class="filter-button" type="button" data-filter="繰り返し"><span>繰り返し</span><small>for / while / 図形 / 素数</small></button>
+<button class="filter-button" type="button" data-filter="配列"><span>配列</span><small>配列・2次元配列</small></button>
+<button class="filter-button" type="button" data-filter="文字列"><span>文字列</span><small>char配列</small></button>
+<button class="filter-button" type="button" data-filter="関数"><span>関数</span><small>引数・戻り値</small></button>
+<button class="filter-button" type="button" data-filter="switch"><span>switch</span><small>switch / 盤面</small></button>
+<button class="filter-button" type="button" data-filter="ゲーム"><span>ゲーム</span><small>乱数・ミニゲーム</small></button>
+        </div>
+      </aside>
+
+      <div class="problem-area">
+        <div class="section-heading">
+          <p>ANSWERS</p>
+          <h2 id="answers-title">回答コード一覧</h2>
+        </div>
+        <div class="answer-grid">
+          
+      <article class="answer-card" id="answer-00" data-group="超基礎" data-search="00 hello 実行すると `hello, world!` と1行表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;hello, world!\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 00</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>Hello</h3>
+        <p>実行すると <code>Hello, World!</code> と1行表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;Hello, World!\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-00" aria-label="No. 00の問題へ">問題</a>
+          <a href="#answer-00" aria-label="No. 00の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-01" data-group="超基礎" data-search="01 2行表示 `hello,` と `c language!` を別々の行に表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;hello,\n&quot;);
+    printf(&quot;c language!\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 01</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>2行表示</h3>
+        <p><code>Hello,</code> と <code>C language!</code> を別々の行に表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;Hello,\n&quot;);
+    printf(&quot;C language!\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-01" aria-label="No. 01の問題へ">問題</a>
+          <a href="#answer-01" aria-label="No. 01の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-02" data-group="超基礎" data-search="02 自己紹介 自分の名前、学年、好きなものをそれぞれ1行ずつ表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;山田太郎\n&quot;);
+    printf(&quot;1年\n&quot;);
+    printf(&quot;プログラミング\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 02</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>自己紹介</h3>
+        <p>自分の名前、学年、好きなものをそれぞれ1行ずつ表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;山田太郎\n&quot;);
+    printf(&quot;1年\n&quot;);
+    printf(&quot;プログラミング\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-02" aria-label="No. 02の問題へ">問題</a>
+          <a href="#answer-02" aria-label="No. 02の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-03" data-group="超基礎" data-search="03 タブ区切り `商品名` と `価格` をタブでそろえて3行表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;商品名\t価格\n&quot;);
+    printf(&quot;pen\t120\n&quot;);
+    printf(&quot;book\t980\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 03</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>タブ区切り</h3>
+        <p><code>商品名</code> と <code>価格</code> をタブでそろえて3行表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;商品名\t価格\n&quot;);
+    printf(&quot;pen\t120\n&quot;);
+    printf(&quot;book\t980\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-03" aria-label="No. 03の問題へ">問題</a>
+          <a href="#answer-03" aria-label="No. 03の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-04" data-group="超基礎" data-search="04 整数の表示 整数 `2026` を変数に代入し、その値を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int year = 2026;
+    printf(&quot;%d\n&quot;, year);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 04</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>整数の表示</h3>
+        <p>整数 <code>2026</code> を変数に代入し、その値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int year = 2026;
+    printf(&quot;%d\n&quot;, year);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-04" aria-label="No. 04の問題へ">問題</a>
+          <a href="#answer-04" aria-label="No. 04の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-05" data-group="超基礎" data-search="05 足し算 `15 + 27` の計算結果を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;%d\n&quot;, 15 + 27);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 05</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>足し算</h3>
+        <p><code>15 + 27</code> の計算結果を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;%d\n&quot;, 15 + 27);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-05" aria-label="No. 05の問題へ">問題</a>
+          <a href="#answer-05" aria-label="No. 05の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-06" data-group="超基礎" data-search="06 四則演算 `20` と `6` の和、差、積、商、余りをそれぞれ表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 20;
+    int b = 6;
+    printf(&quot;%d\n&quot;, a + b);
+    printf(&quot;%d\n&quot;, a - b);
+    printf(&quot;%d\n&quot;, a * b);
+    printf(&quot;%d\n&quot;, a / b);
+    printf(&quot;%d\n&quot;, a % b);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 06</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>四則演算</h3>
+        <p><code>20</code> と <code>6</code> の和、差、積、商、余りをそれぞれ表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 20;
+    int b = 6;
+    printf(&quot;%d\n&quot;, a + b);
+    printf(&quot;%d\n&quot;, a - b);
+    printf(&quot;%d\n&quot;, a * b);
+    printf(&quot;%d\n&quot;, a / b);
+    printf(&quot;%d\n&quot;, a % b);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-06" aria-label="No. 06の問題へ">問題</a>
+          <a href="#answer-06" aria-label="No. 06の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-07" data-group="超基礎" data-search="07 小数の計算 `10.0 / 3.0` の結果を小数第2位まで表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;%.2f\n&quot;, 10.0 / 3.0);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 07</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>小数の計算</h3>
+        <p><code>10.0 / 3.0</code> の結果を小数第2位まで表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;%.2f\n&quot;, 10.0 / 3.0);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-07" aria-label="No. 07の問題へ">問題</a>
+          <a href="#answer-07" aria-label="No. 07の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-08" data-group="超基礎" data-search="08 円の面積 半径 `5.0` の円の面積を求めて表示するプログラムを作成せよ。ただし円周率は `3.14` とする。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    double r = 5.0;
+    printf(&quot;%.2f\n&quot;, 3.14 * r * r);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 08</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>円の面積</h3>
+        <p>半径 <code>5.0</code> の円の面積を求めて表示するプログラムを作成せよ。ただし円周率は <code>3.14</code> とする。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    double r = 5.0;
+    printf(&quot;%.2f\n&quot;, 3.14 * r * r);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-08" aria-label="No. 08の問題へ">問題</a>
+          <a href="#answer-08" aria-label="No. 08の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-09" data-group="超基礎" data-search="09 消費税 定価 `1200` 円の商品について、税込価格を表示するプログラムを作成せよ。税率は10%とする。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int price = 1200;
+    printf(&quot;%d\n&quot;, price * 110 / 100);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 09</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>消費税</h3>
+        <p>定価 <code>1200</code> 円の商品について、税込価格を表示するプログラムを作成せよ。税率は10%とする。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int price = 1200;
+    printf(&quot;%d\n&quot;, price * 110 / 100);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-09" aria-label="No. 09の問題へ">問題</a>
+          <a href="#answer-09" aria-label="No. 09の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-10" data-group="超基礎" data-search="10 入力した整数 整数を1つ入力させ、その値を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 10</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>入力した整数</h3>
+        <p>整数を1つ入力させ、その値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-10" aria-label="No. 10の問題へ">問題</a>
+          <a href="#answer-10" aria-label="No. 10の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-11" data-group="超基礎" data-search="11 入力した小数 小数を1つ入力させ、その値を小数第1位まで表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    double x;
+    scanf(&quot;%lf&quot;, &amp;x);
+    printf(&quot;%.1f\n&quot;, x);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 11</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>入力した小数</h3>
+        <p>小数を1つ入力させ、その値を小数第1位まで表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    double x;
+    scanf(&quot;%lf&quot;, &amp;x);
+    printf(&quot;%.1f\n&quot;, x);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-11" aria-label="No. 11の問題へ">問題</a>
+          <a href="#answer-11" aria-label="No. 11の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-12" data-group="超基礎" data-search="12 入力値の2倍 整数を1つ入力させ、その値の2倍を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, x * 2);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 12</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>入力値の2倍</h3>
+        <p>整数を1つ入力させ、その値の2倍を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, x * 2);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-12" aria-label="No. 12の問題へ">問題</a>
+          <a href="#answer-12" aria-label="No. 12の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-13" data-group="超基礎" data-search="13 2つの整数の和 整数を2つ入力させ、それらの和を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d\n&quot;, a + b);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 13</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>2つの整数の和</h3>
+        <p>整数を2つ入力させ、それらの和を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d\n&quot;, a + b);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-13" aria-label="No. 13の問題へ">問題</a>
+          <a href="#answer-13" aria-label="No. 13の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-14" data-group="超基礎" data-search="14 長方形の面積 縦と横の長さを整数で入力させ、長方形の面積を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int height, width;
+    scanf(&quot;%d%d&quot;, &amp;height, &amp;width);
+    printf(&quot;%d\n&quot;, height * width);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 14</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>長方形の面積</h3>
+        <p>縦と横の長さを整数で入力させ、長方形の面積を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int height, width;
+    scanf(&quot;%d%d&quot;, &amp;height, &amp;width);
+    printf(&quot;%d\n&quot;, height * width);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-14" aria-label="No. 14の問題へ">問題</a>
+          <a href="#answer-14" aria-label="No. 14の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-15" data-group="超基礎" data-search="15 三角形の面積 底辺と高さを小数で入力させ、三角形の面積を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    double base, height;
+    scanf(&quot;%lf%lf&quot;, &amp;base, &amp;height);
+    printf(&quot;%.2f\n&quot;, base * height / 2.0);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 15</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>三角形の面積</h3>
+        <p>底辺と高さを小数で入力させ、三角形の面積を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    double base, height;
+    scanf(&quot;%lf%lf&quot;, &amp;base, &amp;height);
+    printf(&quot;%.2f\n&quot;, base * height / 2.0);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-15" aria-label="No. 15の問題へ">問題</a>
+          <a href="#answer-15" aria-label="No. 15の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-16" data-group="超基礎" data-search="16 割り算と余り 整数を2つ入力させ、1つ目を2つ目で割った商と余りを表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;商 %d\n&quot;, a / b);
+    printf(&quot;余り %d\n&quot;, a % b);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 16</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>割り算と余り</h3>
+        <p>整数を2つ入力させ、1つ目を2つ目で割った商と余りを表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;商 %d\n&quot;, a / b);
+    printf(&quot;余り %d\n&quot;, a % b);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-16" aria-label="No. 16の問題へ">問題</a>
+          <a href="#answer-16" aria-label="No. 16の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-17" data-group="超基礎" data-search="17 桁の取り出し 3桁の整数を入力させ、100の位、10の位、1の位をそれぞれ表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    printf(&quot;%d\n&quot;, n / 100);
+    printf(&quot;%d\n&quot;, n / 10 % 10);
+    printf(&quot;%d\n&quot;, n % 10);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 17</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>桁の取り出し</h3>
+        <p>3桁の整数を入力させ、100の位、10の位、1の位をそれぞれ表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    printf(&quot;%d\n&quot;, n / 100);
+    printf(&quot;%d\n&quot;, n / 10 % 10);
+    printf(&quot;%d\n&quot;, n % 10);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-17" aria-label="No. 17の問題へ">問題</a>
+          <a href="#answer-17" aria-label="No. 17の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-18" data-group="超基礎" data-search="18 割引価格 定価を整数で入力させ、1割引、3割引、5割引の価格を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int price;
+    scanf(&quot;%d&quot;, &amp;price);
+    printf(&quot;%d\n&quot;, price * 9 / 10);
+    printf(&quot;%d\n&quot;, price * 7 / 10);
+    printf(&quot;%d\n&quot;, price * 5 / 10);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 18</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>割引価格</h3>
+        <p>定価を整数で入力させ、1割引、3割引、5割引の価格を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int price;
+    scanf(&quot;%d&quot;, &amp;price);
+    printf(&quot;%d\n&quot;, price * 9 / 10);
+    printf(&quot;%d\n&quot;, price * 7 / 10);
+    printf(&quot;%d\n&quot;, price * 5 / 10);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-18" aria-label="No. 18の問題へ">問題</a>
+          <a href="#answer-18" aria-label="No. 18の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-19" data-group="超基礎" data-search="19 通貨換算 日本円を整数で入力させ、1ドル150円としてドルに換算した金額を小数第2位まで表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int yen;
+    scanf(&quot;%d&quot;, &amp;yen);
+    printf(&quot;%.2f\n&quot;, yen / 150.0);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 19</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>通貨換算</h3>
+        <p>日本円を整数で入力させ、1ドル150円としてドルに換算した金額を小数第2位まで表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int yen;
+    scanf(&quot;%d&quot;, &amp;yen);
+    printf(&quot;%.2f\n&quot;, yen / 150.0);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-19" aria-label="No. 19の問題へ">問題</a>
+          <a href="#answer-19" aria-label="No. 19の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-20" data-group="条件分岐" data-search="20 0判定 整数を1つ入力させ、0なら `zero` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x == 0) {
+        printf(&quot;zero\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 20</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>0判定</h3>
+        <p>整数を1つ入力させ、0なら <code>zero</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x == 0) {
+        printf(&quot;zero\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-20" aria-label="No. 20の問題へ">問題</a>
+          <a href="#answer-20" aria-label="No. 20の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-21" data-group="条件分岐" data-search="21 正の数判定 整数を1つ入力させ、正の数なら `positive` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &gt; 0) {
+        printf(&quot;positive\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 21</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>正の数判定</h3>
+        <p>整数を1つ入力させ、正の数なら <code>positive</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &gt; 0) {
+        printf(&quot;positive\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-21" aria-label="No. 21の問題へ">問題</a>
+          <a href="#answer-21" aria-label="No. 21の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-22" data-group="条件分岐" data-search="22 偶数判定 整数を1つ入力させ、偶数なら `even` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x % 2 == 0) {
+        printf(&quot;even\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 22</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>偶数判定</h3>
+        <p>整数を1つ入力させ、偶数なら <code>even</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x % 2 == 0) {
+        printf(&quot;even\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-22" aria-label="No. 22の問題へ">問題</a>
+          <a href="#answer-22" aria-label="No. 22の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-23" data-group="条件分岐" data-search="23 偶数・奇数 整数を1つ入力させ、偶数なら `even`、奇数なら `odd` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x % 2 == 0) {
+        printf(&quot;even\n&quot;);
+    } else {
+        printf(&quot;odd\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 23</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>偶数・奇数</h3>
+        <p>整数を1つ入力させ、偶数なら <code>even</code>、奇数なら <code>odd</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x % 2 == 0) {
+        printf(&quot;even\n&quot;);
+    } else {
+        printf(&quot;odd\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-23" aria-label="No. 23の問題へ">問題</a>
+          <a href="#answer-23" aria-label="No. 23の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-24" data-group="条件分岐" data-search="24 合否判定 点数を入力させ、60点以上なら `pass`、60点未満なら `fail` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int score;
+    scanf(&quot;%d&quot;, &amp;score);
+    if (score &gt;= 60) {
+        printf(&quot;pass\n&quot;);
+    } else {
+        printf(&quot;fail\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 24</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>合否判定</h3>
+        <p>点数を入力させ、60点以上なら <code>pass</code>、60点未満なら <code>fail</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score;
+    scanf(&quot;%d&quot;, &amp;score);
+    if (score &gt;= 60) {
+        printf(&quot;pass\n&quot;);
+    } else {
+        printf(&quot;fail\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-24" aria-label="No. 24の問題へ">問題</a>
+          <a href="#answer-24" aria-label="No. 24の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-25" data-group="条件分岐" data-search="25 三段階判定 点数を入力させ、80点以上なら `great`、60点以上80点未満なら `pass`、60点未満なら `fail` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int score;
+    scanf(&quot;%d&quot;, &amp;score);
+    if (score &gt;= 80) {
+        printf(&quot;great\n&quot;);
+    } else if (score &gt;= 60) {
+        printf(&quot;pass\n&quot;);
+    } else {
+        printf(&quot;fail\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 25</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>三段階判定</h3>
+        <p>点数を入力させ、80点以上なら <code>great</code>、60点以上80点未満なら <code>pass</code>、60点未満なら <code>fail</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score;
+    scanf(&quot;%d&quot;, &amp;score);
+    if (score &gt;= 80) {
+        printf(&quot;great\n&quot;);
+    } else if (score &gt;= 60) {
+        printf(&quot;pass\n&quot;);
+    } else {
+        printf(&quot;fail\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-25" aria-label="No. 25の問題へ">問題</a>
+          <a href="#answer-25" aria-label="No. 25の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-26" data-group="条件分岐" data-search="26 最大値 整数を2つ入力させ、大きい方の値を表示するプログラムを作成せよ。同じ値の場合はどちらか一方を表示すればよい。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    if (a &gt;= b) {
+        printf(&quot;%d\n&quot;, a);
+    } else {
+        printf(&quot;%d\n&quot;, b);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 26</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>最大値</h3>
+        <p>整数を2つ入力させ、大きい方の値を表示するプログラムを作成せよ。同じ値の場合はどちらか一方を表示すればよい。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    if (a &gt;= b) {
+        printf(&quot;%d\n&quot;, a);
+    } else {
+        printf(&quot;%d\n&quot;, b);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-26" aria-label="No. 26の問題へ">問題</a>
+          <a href="#answer-26" aria-label="No. 26の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-27" data-group="条件分岐" data-search="27 絶対値 整数を1つ入力させ、その絶対値を表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &lt; 0) {
+        x = -x;
+    }
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 27</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>絶対値</h3>
+        <p>整数を1つ入力させ、その絶対値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &lt; 0) {
+        x = -x;
+    }
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-27" aria-label="No. 27の問題へ">問題</a>
+          <a href="#answer-27" aria-label="No. 27の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-28" data-group="条件分岐" data-search="28 範囲判定 整数を1つ入力させ、その値が10以上20以下なら `ok`、それ以外なら `ng` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &gt;= 10 &amp;&amp; x &lt;= 20) {
+        printf(&quot;ok\n&quot;);
+    } else {
+        printf(&quot;ng\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 28</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>範囲判定</h3>
+        <p>整数を1つ入力させ、その値が10以上20以下なら <code>OK</code>、それ以外なら <code>NG</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &gt;= 10 &amp;&amp; x &lt;= 20) {
+        printf(&quot;OK\n&quot;);
+    } else {
+        printf(&quot;NG\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-28" aria-label="No. 28の問題へ">問題</a>
+          <a href="#answer-28" aria-label="No. 28の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-29" data-group="条件分岐" data-search="29 数当て1回 プログラム内で正解の数を `7` と決めておき、整数を1つ入力させる。入力値が正解より大きければ `smaller`、小さければ `larger`、等しければ `correct` と表示するプログラムを作成せよ。 条件分岐 if / else #include &lt;stdio.h&gt;
+
+int main(void) {
+    int answer = 7;
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &gt; answer) {
+        printf(&quot;smaller\n&quot;);
+    } else if (x &lt; answer) {
+        printf(&quot;larger\n&quot;);
+    } else {
+        printf(&quot;correct\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 29</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>数当て1回</h3>
+        <p>プログラム内で正解の数を <code>7</code> と決めておき、整数を1つ入力させる。入力値が正解より大きければ <code>smaller</code>、小さければ <code>larger</code>、等しければ <code>correct</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int answer = 7;
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if (x &gt; answer) {
+        printf(&quot;smaller\n&quot;);
+    } else if (x &lt; answer) {
+        printf(&quot;larger\n&quot;);
+    } else {
+        printf(&quot;correct\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-29" aria-label="No. 29の問題へ">問題</a>
+          <a href="#answer-29" aria-label="No. 29の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-30" data-group="繰り返し" data-search="30 1から10まで 1から10までの整数を1行ずつ表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 30</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1から10まで</h3>
+        <p>1から10までの整数を1行ずつ表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-30" aria-label="No. 30の問題へ">問題</a>
+          <a href="#answer-30" aria-label="No. 30の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-31" data-group="繰り返し" data-search="31 10から1まで 10から1までの整数を1行ずつ表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 10; i &gt;= 1; i--) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 31</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>10から1まで</h3>
+        <p>10から1までの整数を1行ずつ表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 10; i &gt;= 1; i--) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-31" aria-label="No. 31の問題へ">問題</a>
+          <a href="#answer-31" aria-label="No. 31の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-32" data-group="繰り返し" data-search="32 hello 5回 `hello` を5回表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;hello\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 32</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>Hello 5回</h3>
+        <p><code>Hello</code> を5回表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;Hello\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-32" aria-label="No. 32の問題へ">問題</a>
+          <a href="#answer-32" aria-label="No. 32の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-33" data-group="繰り返し" data-search="33 指定回数表示 整数を1つ入力させ、その回数だけ `hello` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        printf(&quot;hello\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 33</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>指定回数表示</h3>
+        <p>整数を1つ入力させ、その回数だけ <code>Hello</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        printf(&quot;Hello\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-33" aria-label="No. 33の問題へ">問題</a>
+          <a href="#answer-33" aria-label="No. 33の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-34" data-group="繰り返し" data-search="34 1からnまで 整数 `n` を入力させ、1から `n` までの整数を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 34</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1からnまで</h3>
+        <p>整数 <code>n</code> を入力させ、1から <code>n</code> までの整数を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-34" aria-label="No. 34の問題へ">問題</a>
+          <a href="#answer-34" aria-label="No. 34の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-35" data-group="繰り返し" data-search="35 nから0まで 整数 `n` を入力させ、`n` から0までの整数を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = n; i &gt;= 0; i--) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 35</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>nから0まで</h3>
+        <p>整数 <code>n</code> を入力させ、<code>n</code> から0までの整数を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = n; i &gt;= 0; i--) {
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-35" aria-label="No. 35の問題へ">問題</a>
+          <a href="#answer-35" aria-label="No. 35の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-36" data-group="繰り返し" data-search="36 1から100までの合計 1から100までの整数の合計を求めて表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int sum = 0;
+    for (int i = 1; i &lt;= 100; i++) {
+        sum += i;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 36</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1から100までの合計</h3>
+        <p>1から100までの整数の合計を求めて表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int sum = 0;
+    for (int i = 1; i &lt;= 100; i++) {
+        sum += i;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-36" aria-label="No. 36の問題へ">問題</a>
+          <a href="#answer-36" aria-label="No. 36の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-37" data-group="繰り返し" data-search="37 1からnまでの合計 整数 `n` を入力させ、1から `n` までの整数の合計を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n, sum = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        sum += i;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 37</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1からnまでの合計</h3>
+        <p>整数 <code>n</code> を入力させ、1から <code>n</code> までの整数の合計を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n, sum = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        sum += i;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-37" aria-label="No. 37の問題へ">問題</a>
+          <a href="#answer-37" aria-label="No. 37の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-38" data-group="繰り返し" data-search="38 n個の合計 最初に個数 `n` を入力させ、その後に整数を `n` 個入力させる。入力された整数の合計を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n, x, sum = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        sum += x;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 38</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>n個の合計</h3>
+        <p>最初に個数 <code>n</code> を入力させ、その後に整数を <code>n</code> 個入力させる。入力された整数の合計を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n, x, sum = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        sum += x;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-38" aria-label="No. 38の問題へ">問題</a>
+          <a href="#answer-38" aria-label="No. 38の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-39" data-group="繰り返し" data-search="39 0で終了 整数を繰り返し入力させ、0が入力されたら終了するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    while (1) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x == 0) {
+            break;
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 39</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>0で終了</h3>
+        <p>整数を繰り返し入力させ、0が入力されたら終了するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    while (1) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x == 0) {
+            break;
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-39" aria-label="No. 39の問題へ">問題</a>
+          <a href="#answer-39" aria-label="No. 39の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-40" data-group="繰り返し" data-search="40 0までの合計 整数を繰り返し入力させ、0が入力されたら入力を終了する。0より前に入力された値の合計を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, sum = 0;
+    while (1) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x == 0) {
+            break;
+        }
+        sum += x;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 40</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>0までの合計</h3>
+        <p>整数を繰り返し入力させ、0が入力されたら入力を終了する。0より前に入力された値の合計を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, sum = 0;
+    while (1) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x == 0) {
+            break;
+        }
+        sum += x;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-40" aria-label="No. 40の問題へ">問題</a>
+          <a href="#answer-40" aria-label="No. 40の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-41" data-group="繰り返し" data-search="41 7の倍数まで 整数を繰り返し入力させ、入力値の合計が7の倍数になったら合計を表示して終了するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, sum = 0;
+    while (1) {
+        scanf(&quot;%d&quot;, &amp;x);
+        sum += x;
+        if (sum % 7 == 0) {
+            break;
+        }
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 41</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>7の倍数まで</h3>
+        <p>整数を繰り返し入力させ、入力値の合計が7の倍数になったら合計を表示して終了するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, sum = 0;
+    while (1) {
+        scanf(&quot;%d&quot;, &amp;x);
+        sum += x;
+        if (sum % 7 == 0) {
+            break;
+        }
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-41" aria-label="No. 41の問題へ">問題</a>
+          <a href="#answer-41" aria-label="No. 41の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-42" data-group="繰り返し" data-search="42 指定回数の平均 最初に個数 `n` を入力させ、その後に整数を `n` 個入力させる。合計と平均を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n, x, sum = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        sum += x;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    printf(&quot;%.1f\n&quot;, (double)sum / n);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 42</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>指定回数の平均</h3>
+        <p>最初に個数 <code>n</code> を入力させ、その後に整数を <code>n</code> 個入力させる。合計と平均を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n, x, sum = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        sum += x;
+    }
+    printf(&quot;%d\n&quot;, sum);
+    printf(&quot;%.1f\n&quot;, (double)sum / n);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-42" aria-label="No. 42の問題へ">問題</a>
+          <a href="#answer-42" aria-label="No. 42の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-43" data-group="繰り返し" data-search="43 5回の最大値 整数を5回入力させ、その中の最大値を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, max;
+    scanf(&quot;%d&quot;, &amp;max);
+    for (int i = 1; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x &gt; max) {
+            max = x;
+        }
+    }
+    printf(&quot;%d\n&quot;, max);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 43</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>5回の最大値</h3>
+        <p>整数を5回入力させ、その中の最大値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, max;
+    scanf(&quot;%d&quot;, &amp;max);
+    for (int i = 1; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x &gt; max) {
+            max = x;
+        }
+    }
+    printf(&quot;%d\n&quot;, max);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-43" aria-label="No. 43の問題へ">問題</a>
+          <a href="#answer-43" aria-label="No. 43の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-44" data-group="繰り返し" data-search="44 5回の最小値 整数を5回入力させ、その中の最小値を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, min;
+    scanf(&quot;%d&quot;, &amp;min);
+    for (int i = 1; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x &lt; min) {
+            min = x;
+        }
+    }
+    printf(&quot;%d\n&quot;, min);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 44</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>5回の最小値</h3>
+        <p>整数を5回入力させ、その中の最小値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, min;
+    scanf(&quot;%d&quot;, &amp;min);
+    for (int i = 1; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;x);
+        if (x &lt; min) {
+            min = x;
+        }
+    }
+    printf(&quot;%d\n&quot;, min);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-44" aria-label="No. 44の問題へ">問題</a>
+          <a href="#answer-44" aria-label="No. 44の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-45" data-group="繰り返し" data-search="45 棒グラフ 整数を1つ入力させ、その数だけ `*` を横1行に表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        printf(&quot;*&quot;);
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 45</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>棒グラフ</h3>
+        <p>整数を1つ入力させ、その数だけ <code>*</code> を横1行に表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        printf(&quot;*&quot;);
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-45" aria-label="No. 45の問題へ">問題</a>
+          <a href="#answer-45" aria-label="No. 45の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-46" data-group="繰り返し" data-search="46 5個ごとに空白 整数を1つ入力させ、その数だけ `*` を表示する。ただし5個ごとに空白を1つ入れるプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        printf(&quot;*&quot;);
+        if (i % 5 == 0) {
+            printf(&quot; &quot;);
+        }
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 46</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>5個ごとに空白</h3>
+        <p>整数を1つ入力させ、その数だけ <code>*</code> を表示する。ただし5個ごとに空白を1つ入れるプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        printf(&quot;*&quot;);
+        if (i % 5 == 0) {
+            printf(&quot; &quot;);
+        }
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-46" aria-label="No. 46の問題へ">問題</a>
+          <a href="#answer-46" aria-label="No. 46の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-47" data-group="繰り返し" data-search="47 正方形 整数 `n` を入力させ、`*` を使って縦 `n`、横 `n` の正方形を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 47</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>正方形</h3>
+        <p>整数 <code>n</code> を入力させ、<code>*</code> を使って縦 <code>n</code>、横 <code>n</code> の正方形を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-47" aria-label="No. 47の問題へ">問題</a>
+          <a href="#answer-47" aria-label="No. 47の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-48" data-group="繰り返し" data-search="48 長方形 縦と横の長さを入力させ、`*` を使ってその大きさの長方形を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int height, width;
+    scanf(&quot;%d%d&quot;, &amp;height, &amp;width);
+    for (int i = 0; i &lt; height; i++) {
+        for (int j = 0; j &lt; width; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 48</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>長方形</h3>
+        <p>縦と横の長さを入力させ、<code>*</code> を使ってその大きさの長方形を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int height, width;
+    scanf(&quot;%d%d&quot;, &amp;height, &amp;width);
+    for (int i = 0; i &lt; height; i++) {
+        for (int j = 0; j &lt; width; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-48" aria-label="No. 48の問題へ">問題</a>
+          <a href="#answer-48" aria-label="No. 48の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-49" data-group="繰り返し" data-search="49 右上がり三角形 整数 `n` を入力させ、1行目に1個、2行目に2個、...、`n` 行目に `n` 個の `*` を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 0; j &lt; i; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 49</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>右上がり三角形</h3>
+        <p>整数 <code>n</code> を入力させ、1行目に1個、2行目に2個、...、<code>n</code> 行目に <code>n</code> 個の <code>*</code> を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 0; j &lt; i; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-49" aria-label="No. 49の問題へ">問題</a>
+          <a href="#answer-49" aria-label="No. 49の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-50" data-group="繰り返し" data-search="50 右下がり三角形 整数 `n` を入力させ、1行目に `n` 個、2行目に `n - 1` 個、...、最後の行に1個の `*` を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = n; i &gt;= 1; i--) {
+        for (int j = 0; j &lt; i; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 50</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>右下がり三角形</h3>
+        <p>整数 <code>n</code> を入力させ、1行目に <code>n</code> 個、2行目に <code>n - 1</code> 個、...、最後の行に1個の <code>*</code> を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = n; i &gt;= 1; i--) {
+        for (int j = 0; j &lt; i; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-50" aria-label="No. 50の問題へ">問題</a>
+          <a href="#answer-50" aria-label="No. 50の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-51" data-group="繰り返し" data-search="51 右寄せ三角形 整数 `n` を入力させ、空白と `*` を使って右寄せの三角形を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 0; j &lt; n - i; j++) {
+            printf(&quot; &quot;);
+        }
+        for (int j = 0; j &lt; i; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 51</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>右寄せ三角形</h3>
+        <p>整数 <code>n</code> を入力させ、空白と <code>*</code> を使って右寄せの三角形を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 0; j &lt; n - i; j++) {
+            printf(&quot; &quot;);
+        }
+        for (int j = 0; j &lt; i; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-51" aria-label="No. 51の問題へ">問題</a>
+          <a href="#answer-51" aria-label="No. 51の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-52" data-group="繰り返し" data-search="52 九九表 1の段から9の段までの九九表を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 9; i++) {
+        for (int j = 1; j &lt;= 9; j++) {
+            printf(&quot;%3d&quot;, i * j);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 52</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>九九表</h3>
+        <p>1の段から9の段までの九九表を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 9; i++) {
+        for (int j = 1; j &lt;= 9; j++) {
+            printf(&quot;%3d&quot;, i * j);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-52" aria-label="No. 52の問題へ">問題</a>
+          <a href="#answer-52" aria-label="No. 52の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-53" data-group="繰り返し" data-search="53 3の倍数 1から50までの整数を表示する。ただし3の倍数のときは数の代わりに `bar` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 50; i++) {
+        if (i % 3 == 0) {
+            printf(&quot;bar\n&quot;);
+        } else {
+            printf(&quot;%d\n&quot;, i);
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 53</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>3の倍数</h3>
+        <p>1から50までの整数を表示する。ただし3の倍数のときは数の代わりに <code>bar</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 50; i++) {
+        if (i % 3 == 0) {
+            printf(&quot;bar\n&quot;);
+        } else {
+            printf(&quot;%d\n&quot;, i);
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-53" aria-label="No. 53の問題へ">問題</a>
+          <a href="#answer-53" aria-label="No. 53の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-54" data-group="繰り返し" data-search="54 3のつく数 1から50までの整数を表示する。ただし3の倍数、または1の位が3の数のときは数の代わりに `aho` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 50; i++) {
+        if (i % 3 == 0 || i % 10 == 3) {
+            printf(&quot;aho\n&quot;);
+        } else {
+            printf(&quot;%d\n&quot;, i);
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 54</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>3のつく数</h3>
+        <p>1から50までの整数を表示する。ただし3の倍数、または1の位が3の数のときは数の代わりに <code>aho</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 50; i++) {
+        if (i % 3 == 0 || i % 10 == 3) {
+            printf(&quot;aho\n&quot;);
+        } else {
+            printf(&quot;%d\n&quot;, i);
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-54" aria-label="No. 54の問題へ">問題</a>
+          <a href="#answer-54" aria-label="No. 54の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-55" data-group="繰り返し" data-search="55 素数判定 整数 `n` を入力させ、`n` が素数なら `prime`、素数でなければ `not prime` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    int prime = 1;
+    scanf(&quot;%d&quot;, &amp;n);
+    if (n &lt; 2) {
+        prime = 0;
+    }
+    for (int i = 2; i * i &lt;= n; i++) {
+        if (n % i == 0) {
+            prime = 0;
+        }
+    }
+    if (prime) {
+        printf(&quot;prime\n&quot;);
+    } else {
+        printf(&quot;not prime\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 55</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>素数判定</h3>
+        <p>整数 <code>n</code> を入力させ、<code>n</code> が素数なら <code>prime</code>、素数でなければ <code>not prime</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    int prime = 1;
+    scanf(&quot;%d&quot;, &amp;n);
+    if (n &lt; 2) {
+        prime = 0;
+    }
+    for (int i = 2; i * i &lt;= n; i++) {
+        if (n % i == 0) {
+            prime = 0;
+        }
+    }
+    if (prime) {
+        printf(&quot;prime\n&quot;);
+    } else {
+        printf(&quot;not prime\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-55" aria-label="No. 55の問題へ">問題</a>
+          <a href="#answer-55" aria-label="No. 55の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-56" data-group="繰り返し" data-search="56 100までの素数 1から100までの整数について、素数ならその数を表示し、素数でなければ `x` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int n = 1; n &lt;= 100; n++) {
+        int prime = 1;
+        if (n &lt; 2) {
+            prime = 0;
+        }
+        for (int i = 2; i * i &lt;= n; i++) {
+            if (n % i == 0) {
+                prime = 0;
+            }
+        }
+        if (prime) {
+            printf(&quot;%d\n&quot;, n);
+        } else {
+            printf(&quot;x\n&quot;);
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 56</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>100までの素数</h3>
+        <p>1から100までの整数について、素数ならその数を表示し、素数でなければ <code>x</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int n = 1; n &lt;= 100; n++) {
+        int prime = 1;
+        if (n &lt; 2) {
+            prime = 0;
+        }
+        for (int i = 2; i * i &lt;= n; i++) {
+            if (n % i == 0) {
+                prime = 0;
+            }
+        }
+        if (prime) {
+            printf(&quot;%d\n&quot;, n);
+        } else {
+            printf(&quot;x\n&quot;);
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-56" aria-label="No. 56の問題へ">問題</a>
+          <a href="#answer-56" aria-label="No. 56の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-57" data-group="繰り返し" data-search="57 break 1から10までの整数を順に表示する。ただし5を表示したら繰り返しを終了するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        printf(&quot;%d\n&quot;, i);
+        if (i == 5) {
+            break;
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 57</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>break</h3>
+        <p>1から10までの整数を順に表示する。ただし5を表示したら繰り返しを終了するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        printf(&quot;%d\n&quot;, i);
+        if (i == 5) {
+            break;
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-57" aria-label="No. 57の問題へ">問題</a>
+          <a href="#answer-57" aria-label="No. 57の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-58" data-group="繰り返し" data-search="58 continue 1から10までの整数を順に表示する。ただし5だけは表示しないプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        if (i == 5) {
+            continue;
+        }
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 58</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>continue</h3>
+        <p>1から10までの整数を順に表示する。ただし5だけは表示しないプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        if (i == 5) {
+            continue;
+        }
+        printf(&quot;%d\n&quot;, i);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-58" aria-label="No. 58の問題へ">問題</a>
+          <a href="#answer-58" aria-label="No. 58の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-59" data-group="繰り返し" data-search="59 入力制限 10以下の整数が入力されるまで入力を繰り返し、最後に入力された値を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    do {
+        scanf(&quot;%d&quot;, &amp;x);
+    } while (x &gt; 10);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 59</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>入力制限</h3>
+        <p>10以下の整数が入力されるまで入力を繰り返し、最後に入力された値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    do {
+        scanf(&quot;%d&quot;, &amp;x);
+    } while (x &gt; 10);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-59" aria-label="No. 59の問題へ">問題</a>
+          <a href="#answer-59" aria-label="No. 59の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-60" data-group="配列" data-search="60 配列の初期化 要素数5の整数配列を作り、`10, 20, 30, 40, 50` を代入して順に表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5] = {10, 20, 30, 40, 50};
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;%d\n&quot;, a[i]);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 60</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の初期化</h3>
+        <p>要素数5の整数配列を作り、<code>10, 20, 30, 40, 50</code> を代入して順に表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5] = {10, 20, 30, 40, 50};
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;%d\n&quot;, a[i]);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-60" aria-label="No. 60の問題へ">問題</a>
+          <a href="#answer-60" aria-label="No. 60の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-61" data-group="配列" data-search="61 配列に入力 要素数5の整数配列を作り、整数を5個入力させ、入力された順に表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;%d\n&quot;, a[i]);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 61</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列に入力</h3>
+        <p>要素数5の整数配列を作り、整数を5個入力させ、入力された順に表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;%d\n&quot;, a[i]);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-61" aria-label="No. 61の問題へ">問題</a>
+          <a href="#answer-61" aria-label="No. 61の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-62" data-group="配列" data-search="62 配列の合計 要素数5の整数配列に点数を入力させ、合計を表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[5];
+    int sum = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;score[i]);
+        sum += score[i];
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 62</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の合計</h3>
+        <p>要素数5の整数配列に点数を入力させ、合計を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[5];
+    int sum = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;score[i]);
+        sum += score[i];
+    }
+    printf(&quot;%d\n&quot;, sum);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-62" aria-label="No. 62の問題へ">問題</a>
+          <a href="#answer-62" aria-label="No. 62の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-63" data-group="配列" data-search="63 配列の平均 要素数5の整数配列に点数を入力させ、平均を小数第1位まで表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[5];
+    int sum = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;score[i]);
+        sum += score[i];
+    }
+    printf(&quot;%.1f\n&quot;, sum / 5.0);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 63</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の平均</h3>
+        <p>要素数5の整数配列に点数を入力させ、平均を小数第1位まで表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[5];
+    int sum = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;score[i]);
+        sum += score[i];
+    }
+    printf(&quot;%.1f\n&quot;, sum / 5.0);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-63" aria-label="No. 63の問題へ">問題</a>
+          <a href="#answer-63" aria-label="No. 63の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-64" data-group="配列" data-search="64 配列の最大値 要素数5の整数配列に値を入力させ、最大値を表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5], max;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    max = a[0];
+    for (int i = 1; i &lt; 5; i++) {
+        if (a[i] &gt; max) {
+            max = a[i];
+        }
+    }
+    printf(&quot;%d\n&quot;, max);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 64</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の最大値</h3>
+        <p>要素数5の整数配列に値を入力させ、最大値を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5], max;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    max = a[0];
+    for (int i = 1; i &lt; 5; i++) {
+        if (a[i] &gt; max) {
+            max = a[i];
+        }
+    }
+    printf(&quot;%d\n&quot;, max);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-64" aria-label="No. 64の問題へ">問題</a>
+          <a href="#answer-64" aria-label="No. 64の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-65" data-group="配列" data-search="65 配列の合否 5人分の点数を配列に入力させ、各点数について60点以上なら `pass`、60点未満なら `fail` と表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[5];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;score[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        if (score[i] &gt;= 60) {
+            printf(&quot;pass\n&quot;);
+        } else {
+            printf(&quot;fail\n&quot;);
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 65</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の合否</h3>
+        <p>5人分の点数を配列に入力させ、各点数について60点以上なら <code>pass</code>、60点未満なら <code>fail</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[5];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;score[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        if (score[i] &gt;= 60) {
+            printf(&quot;pass\n&quot;);
+        } else {
+            printf(&quot;fail\n&quot;);
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-65" aria-label="No. 65の問題へ">問題</a>
+          <a href="#answer-65" aria-label="No. 65の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-66" data-group="配列" data-search="66 逆順表示 要素数5の整数配列に値を入力させ、入力と逆の順番で表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    for (int i = 4; i &gt;= 0; i--) {
+        printf(&quot;%d\n&quot;, a[i]);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 66</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>逆順表示</h3>
+        <p>要素数5の整数配列に値を入力させ、入力と逆の順番で表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    for (int i = 4; i &gt;= 0; i--) {
+        printf(&quot;%d\n&quot;, a[i]);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-66" aria-label="No. 66の問題へ">問題</a>
+          <a href="#answer-66" aria-label="No. 66の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-67" data-group="配列" data-search="67 配列の検索 要素数5の整数配列に値を入力させたあと、探したい値を1つ入力させる。その値が配列の中にあれば `found`、なければ `not found` と表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5], target;
+    int found = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    scanf(&quot;%d&quot;, &amp;target);
+    for (int i = 0; i &lt; 5; i++) {
+        if (a[i] == target) {
+            found = 1;
+        }
+    }
+    if (found) {
+        printf(&quot;found\n&quot;);
+    } else {
+        printf(&quot;not found\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 67</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の検索</h3>
+        <p>要素数5の整数配列に値を入力させたあと、探したい値を1つ入力させる。その値が配列の中にあれば <code>found</code>、なければ <code>not found</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5], target;
+    int found = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%d&quot;, &amp;a[i]);
+    }
+    scanf(&quot;%d&quot;, &amp;target);
+    for (int i = 0; i &lt; 5; i++) {
+        if (a[i] == target) {
+            found = 1;
+        }
+    }
+    if (found) {
+        printf(&quot;found\n&quot;);
+    } else {
+        printf(&quot;not found\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-67" aria-label="No. 67の問題へ">問題</a>
+          <a href="#answer-67" aria-label="No. 67の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-68" data-group="配列" data-search="68 2次元配列の九九 10行10列の整数配列を用意し、`kuku[i][j]` に `i * j` を入れて、1の段から9の段まで表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int kuku[10][10];
+    for (int i = 1; i &lt;= 9; i++) {
+        for (int j = 1; j &lt;= 9; j++) {
+            kuku[i][j] = i * j;
+        }
+    }
+    for (int i = 1; i &lt;= 9; i++) {
+        for (int j = 1; j &lt;= 9; j++) {
+            printf(&quot;%3d&quot;, kuku[i][j]);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 68</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>2次元配列の九九</h3>
+        <p>10行10列の整数配列を用意し、<code>kuku[i][j]</code> に <code>i * j</code> を入れて、1の段から9の段まで表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int kuku[10][10];
+    for (int i = 1; i &lt;= 9; i++) {
+        for (int j = 1; j &lt;= 9; j++) {
+            kuku[i][j] = i * j;
+        }
+    }
+    for (int i = 1; i &lt;= 9; i++) {
+        for (int j = 1; j &lt;= 9; j++) {
+            printf(&quot;%3d&quot;, kuku[i][j]);
+        }
+        printf(&quot;\n&quot;);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-68" aria-label="No. 68の問題へ">問題</a>
+          <a href="#answer-68" aria-label="No. 68の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-69" data-group="配列" data-search="69 2教科の成績 6人分の国語と算数の点数を2次元配列に入力させ、各人の合計と平均を表示するプログラムを作成せよ。 配列 配列・2次元配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[6][2];
+    for (int i = 0; i &lt; 6; i++) {
+        scanf(&quot;%d%d&quot;, &amp;score[i][0], &amp;score[i][1]);
+    }
+    for (int i = 0; i &lt; 6; i++) {
+        int sum = score[i][0] + score[i][1];
+        printf(&quot;%d %.1f\n&quot;, sum, sum / 2.0);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 69</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>2教科の成績</h3>
+        <p>6人分の国語と算数の点数を2次元配列に入力させ、各人の合計と平均を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score[6][2];
+    for (int i = 0; i &lt; 6; i++) {
+        scanf(&quot;%d%d&quot;, &amp;score[i][0], &amp;score[i][1]);
+    }
+    for (int i = 0; i &lt; 6; i++) {
+        int sum = score[i][0] + score[i][1];
+        printf(&quot;%d %.1f\n&quot;, sum, sum / 2.0);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-69" aria-label="No. 69の問題へ">問題</a>
+          <a href="#answer-69" aria-label="No. 69の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-70" data-group="文字列" data-search="70 文字列の入力 名前を文字列として入力させ、`hello, 名前` と表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char name[100];
+    scanf(&quot;%99s&quot;, name);
+    printf(&quot;hello, %s\n&quot;, name);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 70</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字列の入力</h3>
+        <p>名前を文字列として入力させ、<code>Hello, 名前</code> と表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char name[100];
+    scanf(&quot;%99s&quot;, name);
+    printf(&quot;Hello, %s\n&quot;, name);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-70" aria-label="No. 70の問題へ">問題</a>
+          <a href="#answer-70" aria-label="No. 70の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-71" data-group="文字列" data-search="71 文字の取り出し 文字列を1つ入力させ、先頭の文字と3文字目を表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char s[100];
+    scanf(&quot;%99s&quot;, s);
+    printf(&quot;%c\n&quot;, s[0]);
+    printf(&quot;%c\n&quot;, s[2]);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 71</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字の取り出し</h3>
+        <p>文字列を1つ入力させ、先頭の文字と3文字目を表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char s[100];
+    scanf(&quot;%99s&quot;, s);
+    printf(&quot;%c\n&quot;, s[0]);
+    printf(&quot;%c\n&quot;, s[2]);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-71" aria-label="No. 71の問題へ">問題</a>
+          <a href="#answer-71" aria-label="No. 71の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-72" data-group="文字列" data-search="72 イニシャル 名字と名前を別々の文字列として入力させ、名前の先頭文字と名字の先頭文字を使ってイニシャルを表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char family[100], given[100];
+    scanf(&quot;%99s%99s&quot;, family, given);
+    printf(&quot;%c.%c.\n&quot;, given[0], family[0]);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 72</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>イニシャル</h3>
+        <p>名字と名前を別々の文字列として入力させ、名前の先頭文字と名字の先頭文字を使ってイニシャルを表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char family[100], given[100];
+    scanf(&quot;%99s%99s&quot;, family, given);
+    printf(&quot;%c.%c.\n&quot;, given[0], family[0]);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-72" aria-label="No. 72の問題へ">問題</a>
+          <a href="#answer-72" aria-label="No. 72の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-73" data-group="文字列" data-search="73 文字列配列 5個の文字列を入力させ、入力された文字列を順に表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char words[5][100];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%99s&quot;, words[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;%s\n&quot;, words[i]);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 73</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字列配列</h3>
+        <p>5個の文字列を入力させ、入力された文字列を順に表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char words[5][100];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%99s&quot;, words[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        printf(&quot;%s\n&quot;, words[i]);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-73" aria-label="No. 73の問題へ">問題</a>
+          <a href="#answer-73" aria-label="No. 73の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-74" data-group="文字列" data-search="74 aで始まる文字列 5個の文字列を入力させ、その中から `a` で始まる文字列だけを表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char words[5][100];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%99s&quot;, words[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        if (words[i][0] == 'a') {
+            printf(&quot;%s\n&quot;, words[i]);
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 74</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>aで始まる文字列</h3>
+        <p>5個の文字列を入力させ、その中から <code>a</code> で始まる文字列だけを表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char words[5][100];
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%99s&quot;, words[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        if (words[i][0] == 'a') {
+            printf(&quot;%s\n&quot;, words[i]);
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-74" aria-label="No. 74の問題へ">問題</a>
+          <a href="#answer-74" aria-label="No. 74の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-75" data-group="文字列" data-search="75 文字のカウント 5個の文字列を入力させ、すべての文字列に含まれる `o` の数を数えて表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char words[5][100];
+    int count = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%99s&quot;, words[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        for (int j = 0; words[i][j] != '\0'; j++) {
+            if (words[i][j] == 'o') {
+                count++;
+            }
+        }
+    }
+    printf(&quot;%d\n&quot;, count);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 75</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字のカウント</h3>
+        <p>5個の文字列を入力させ、すべての文字列に含まれる <code>o</code> の数を数えて表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char words[5][100];
+    int count = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        scanf(&quot;%99s&quot;, words[i]);
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        for (int j = 0; words[i][j] != '\0'; j++) {
+            if (words[i][j] == 'o') {
+                count++;
+            }
+        }
+    }
+    printf(&quot;%d\n&quot;, count);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-75" aria-label="No. 75の問題へ">問題</a>
+          <a href="#answer-75" aria-label="No. 75の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-76" data-group="文字列" data-search="76 終端文字まで 文字列を1つ入力させ、先頭から終端文字 `\0` に到達するまで1文字ずつ表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char s[100];
+    scanf(&quot;%99s&quot;, s);
+    for (int i = 0; s[i] != '\0'; i++) {
+        printf(&quot;%c\n&quot;, s[i]);
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 76</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>終端文字まで</h3>
+        <p>文字列を1つ入力させ、先頭から終端文字 <code>\0</code> に到達するまで1文字ずつ表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char s[100];
+    scanf(&quot;%99s&quot;, s);
+    for (int i = 0; s[i] != '\0'; i++) {
+        printf(&quot;%c\n&quot;, s[i]);
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-76" aria-label="No. 76の問題へ">問題</a>
+          <a href="#answer-76" aria-label="No. 76の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-77" data-group="文字列" data-search="77 文字変換 文字列を1つ入力させ、文字 `a` は `1`、文字 `b` は `2`、文字 `c` は `3`、それ以外の文字はそのまま表示するプログラムを作成せよ。 文字列 char配列 #include &lt;stdio.h&gt;
+
+int main(void) {
+    char s[100];
+    scanf(&quot;%99s&quot;, s);
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] == 'a') {
+            printf(&quot;1&quot;);
+        } else if (s[i] == 'b') {
+            printf(&quot;2&quot;);
+        } else if (s[i] == 'c') {
+            printf(&quot;3&quot;);
+        } else {
+            printf(&quot;%c&quot;, s[i]);
+        }
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 77</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字変換</h3>
+        <p>文字列を1つ入力させ、文字 <code>a</code> は <code>1</code>、文字 <code>b</code> は <code>2</code>、文字 <code>c</code> は <code>3</code>、それ以外の文字はそのまま表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char s[100];
+    scanf(&quot;%99s&quot;, s);
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] == 'a') {
+            printf(&quot;1&quot;);
+        } else if (s[i] == 'b') {
+            printf(&quot;2&quot;);
+        } else if (s[i] == 'c') {
+            printf(&quot;3&quot;);
+        } else {
+            printf(&quot;%c&quot;, s[i]);
+        }
+    }
+    printf(&quot;\n&quot;);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-77" aria-label="No. 77の問題へ">問題</a>
+          <a href="#answer-77" aria-label="No. 77の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-78" data-group="関数" data-search="78 関数であいさつ `hello` と表示する関数 `hello` を作り、`main` 関数から呼び出すプログラムを作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+void hello(void) {
+    printf(&quot;hello\n&quot;);
+}
+
+int main(void) {
+    hello();
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 78</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数であいさつ</h3>
+        <p><code>Hello</code> と表示する関数 <code>hello</code> を作り、<code>main</code> 関数から呼び出すプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+void hello(void) {
+    printf(&quot;Hello\n&quot;);
+}
+
+int main(void) {
+    hello();
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-78" aria-label="No. 78の問題へ">問題</a>
+          <a href="#answer-78" aria-label="No. 78の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-79" data-group="関数" data-search="79 関数で税込価格 整数の価格を受け取り、税込価格を表示する関数を作成せよ。`main` 関数から価格 `1000` を渡して呼び出すこと。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+void print_tax_included(int price) {
+    printf(&quot;%d\n&quot;, price * 110 / 100);
+}
+
+int main(void) {
+    print_tax_included(1000);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 79</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で税込価格</h3>
+        <p>整数の価格を受け取り、税込価格を表示する関数を作成せよ。<code>main</code> 関数から価格 <code>1000</code> を渡して呼び出すこと。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+void print_tax_included(int price) {
+    printf(&quot;%d\n&quot;, price * 110 / 100);
+}
+
+int main(void) {
+    print_tax_included(1000);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-79" aria-label="No. 79の問題へ">問題</a>
+          <a href="#answer-79" aria-label="No. 79の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-80" data-group="関数" data-search="80 関数で合計 2つの整数を受け取り、その和を返す関数 `sum2` を作成せよ。`main` 関数で2つの値を入力させ、戻り値を表示すること。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+int sum2(int a, int b) {
+    return a + b;
+}
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d\n&quot;, sum2(a, b));
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 80</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で合計</h3>
+        <p>2つの整数を受け取り、その和を返す関数 <code>sum2</code> を作成せよ。<code>main</code> 関数で2つの値を入力させ、戻り値を表示すること。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int sum2(int a, int b) {
+    return a + b;
+}
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d\n&quot;, sum2(a, b));
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-80" aria-label="No. 80の問題へ">問題</a>
+          <a href="#answer-80" aria-label="No. 80の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-81" data-group="関数" data-search="81 関数で最大値 2つの整数を受け取り、大きい方を返す関数 `max2` を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+int max2(int a, int b) {
+    if (a &gt;= b) {
+        return a;
+    }
+    return b;
+}
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d\n&quot;, max2(a, b));
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 81</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で最大値</h3>
+        <p>2つの整数を受け取り、大きい方を返す関数 <code>max2</code> を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int max2(int a, int b) {
+    if (a &gt;= b) {
+        return a;
+    }
+    return b;
+}
+
+int main(void) {
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d\n&quot;, max2(a, b));
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-81" aria-label="No. 81の問題へ">問題</a>
+          <a href="#answer-81" aria-label="No. 81の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-82" data-group="関数" data-search="82 関数で3つの最大値 3つの整数を受け取り、最大値を返す関数 `max3` を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+int max3(int a, int b, int c) {
+    int max = a;
+    if (b &gt; max) {
+        max = b;
+    }
+    if (c &gt; max) {
+        max = c;
+    }
+    return max;
+}
+
+int main(void) {
+    int a, b, c;
+    scanf(&quot;%d%d%d&quot;, &amp;a, &amp;b, &amp;c);
+    printf(&quot;%d\n&quot;, max3(a, b, c));
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 82</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で3つの最大値</h3>
+        <p>3つの整数を受け取り、最大値を返す関数 <code>max3</code> を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int max3(int a, int b, int c) {
+    int max = a;
+    if (b &gt; max) {
+        max = b;
+    }
+    if (c &gt; max) {
+        max = c;
+    }
+    return max;
+}
+
+int main(void) {
+    int a, b, c;
+    scanf(&quot;%d%d%d&quot;, &amp;a, &amp;b, &amp;c);
+    printf(&quot;%d\n&quot;, max3(a, b, c));
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-82" aria-label="No. 82の問題へ">問題</a>
+          <a href="#answer-82" aria-label="No. 82の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-83" data-group="関数" data-search="83 関数で平均 3つの整数を受け取り、平均値を `double` で返す関数 `average3` を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+double average3(int a, int b, int c) {
+    return (a + b + c) / 3.0;
+}
+
+int main(void) {
+    int a, b, c;
+    scanf(&quot;%d%d%d&quot;, &amp;a, &amp;b, &amp;c);
+    printf(&quot;%.1f\n&quot;, average3(a, b, c));
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 83</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で平均</h3>
+        <p>3つの整数を受け取り、平均値を <code>double</code> で返す関数 <code>average3</code> を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+double average3(int a, int b, int c) {
+    return (a + b + c) / 3.0;
+}
+
+int main(void) {
+    int a, b, c;
+    scanf(&quot;%d%d%d&quot;, &amp;a, &amp;b, &amp;c);
+    printf(&quot;%.1f\n&quot;, average3(a, b, c));
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-83" aria-label="No. 83の問題へ">問題</a>
+          <a href="#answer-83" aria-label="No. 83の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-84" data-group="関数" data-search="84 関数で正方形 整数 `n` を受け取り、`*` で `n` 行 `n` 列の正方形を表示する関数を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+void print_square(int n) {
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    print_square(n);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 84</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で正方形</h3>
+        <p>整数 <code>n</code> を受け取り、<code>*</code> で <code>n</code> 行 <code>n</code> 列の正方形を表示する関数を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+void print_square(int n) {
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            printf(&quot;*&quot;);
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    print_square(n);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-84" aria-label="No. 84の問題へ">問題</a>
+          <a href="#answer-84" aria-label="No. 84の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-85" data-group="関数" data-search="85 関数で合計1からn 整数 `n` を受け取り、1から `n` までの合計を返す関数を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+int sum_to_n(int n) {
+    int sum = 0;
+    for (int i = 1; i &lt;= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    printf(&quot;%d\n&quot;, sum_to_n(n));
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 85</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で合計1からn</h3>
+        <p>整数 <code>n</code> を受け取り、1から <code>n</code> までの合計を返す関数を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int sum_to_n(int n) {
+    int sum = 0;
+    for (int i = 1; i &lt;= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+int main(void) {
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    printf(&quot;%d\n&quot;, sum_to_n(n));
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-85" aria-label="No. 85の問題へ">問題</a>
+          <a href="#answer-85" aria-label="No. 85の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-86" data-group="関数" data-search="86 関数で入力制限 最大値 `max` を受け取り、`max` 以下の整数が入力されるまで入力を繰り返し、入力された値を返す関数を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+int input_until_max(int max) {
+    int x;
+    do {
+        scanf(&quot;%d&quot;, &amp;x);
+    } while (x &gt; max);
+    return x;
+}
+
+int main(void) {
+    int x = input_until_max(10);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 86</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で入力制限</h3>
+        <p>最大値 <code>max</code> を受け取り、<code>max</code> 以下の整数が入力されるまで入力を繰り返し、入力された値を返す関数を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int input_until_max(int max) {
+    int x;
+    do {
+        scanf(&quot;%d&quot;, &amp;x);
+    } while (x &gt; max);
+    return x;
+}
+
+int main(void) {
+    int x = input_until_max(10);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-86" aria-label="No. 86の問題へ">問題</a>
+          <a href="#answer-86" aria-label="No. 86の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-87" data-group="関数" data-search="87 関数で絶対値 整数を受け取り、その絶対値を返す関数を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+int absolute(int x) {
+    if (x &lt; 0) {
+        return -x;
+    }
+    return x;
+}
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, absolute(x));
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 87</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で絶対値</h3>
+        <p>整数を受け取り、その絶対値を返す関数を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int absolute(int x) {
+    if (x &lt; 0) {
+        return -x;
+    }
+    return x;
+}
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    printf(&quot;%d\n&quot;, absolute(x));
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-87" aria-label="No. 87の問題へ">問題</a>
+          <a href="#answer-87" aria-label="No. 87の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-88" data-group="関数" data-search="88 関数で四則演算 2つの整数と演算子1文字を受け取り、`+`, `-`, `*`, `/` に応じて計算結果を表示する関数を作成せよ。 関数 引数・戻り値 #include &lt;stdio.h&gt;
+
+void calculate(int a, int b, char op) {
+    switch (op) {
+        case '+':
+            printf(&quot;%d\n&quot;, a + b);
+            break;
+        case '-':
+            printf(&quot;%d\n&quot;, a - b);
+            break;
+        case '*':
+            printf(&quot;%d\n&quot;, a * b);
+            break;
+        case '/':
+            printf(&quot;%d\n&quot;, a / b);
+            break;
+    }
+}
+
+int main(void) {
+    int a, b;
+    char op;
+    scanf(&quot;%d %c %d&quot;, &amp;a, &amp;op, &amp;b);
+    calculate(a, b, op);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 88</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で四則演算</h3>
+        <p>2つの整数と演算子1文字を受け取り、<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> に応じて計算結果を表示する関数を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+void calculate(int a, int b, char op) {
+    switch (op) {
+        case '+':
+            printf(&quot;%d\n&quot;, a + b);
+            break;
+        case '-':
+            printf(&quot;%d\n&quot;, a - b);
+            break;
+        case '*':
+            printf(&quot;%d\n&quot;, a * b);
+            break;
+        case '/':
+            printf(&quot;%d\n&quot;, a / b);
+            break;
+    }
+}
+
+int main(void) {
+    int a, b;
+    char op;
+    scanf(&quot;%d %c %d&quot;, &amp;a, &amp;op, &amp;b);
+    calculate(a, b, op);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-88" aria-label="No. 88の問題へ">問題</a>
+          <a href="#answer-88" aria-label="No. 88の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-89" data-group="switch" data-search="89 switchで余り 整数を1つ入力させ、3で割った余りが0なら `remainder 0`、1なら `remainder 1`、2なら `remainder 2` と `switch` 文で表示するプログラムを作成せよ。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    switch (x % 3) {
+        case 0:
+            printf(&quot;remainder 0\n&quot;);
+            break;
+        case 1:
+            printf(&quot;remainder 1\n&quot;);
+            break;
+        case 2:
+            printf(&quot;remainder 2\n&quot;);
+            break;
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 89</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで余り</h3>
+        <p>整数を1つ入力させ、3で割った余りが0なら <code>remainder 0</code>、1なら <code>remainder 1</code>、2なら <code>remainder 2</code> と <code>switch</code> 文で表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    switch (x % 3) {
+        case 0:
+            printf(&quot;remainder 0\n&quot;);
+            break;
+        case 1:
+            printf(&quot;remainder 1\n&quot;);
+            break;
+        case 2:
+            printf(&quot;remainder 2\n&quot;);
+            break;
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-89" aria-label="No. 89の問題へ">問題</a>
+          <a href="#answer-89" aria-label="No. 89の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-90" data-group="switch" data-search="90 switchで季節 月を整数で入力させ、3から5なら春、6から8なら夏、9から11なら秋、12, 1, 2なら冬、それ以外なら入力ミスと表示するプログラムを `switch` 文で作成せよ。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int month;
+    scanf(&quot;%d&quot;, &amp;month);
+    switch (month) {
+        case 3:
+        case 4:
+        case 5:
+            printf(&quot;spring\n&quot;);
+            break;
+        case 6:
+        case 7:
+        case 8:
+            printf(&quot;summer\n&quot;);
+            break;
+        case 9:
+        case 10:
+        case 11:
+            printf(&quot;autumn\n&quot;);
+            break;
+        case 12:
+        case 1:
+        case 2:
+            printf(&quot;winter\n&quot;);
+            break;
+        default:
+            printf(&quot;input error\n&quot;);
+            break;
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 90</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで季節</h3>
+        <p>月を整数で入力させ、3から5なら春、6から8なら夏、9から11なら秋、12, 1, 2なら冬、それ以外なら入力ミスと表示するプログラムを <code>switch</code> 文で作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int month;
+    scanf(&quot;%d&quot;, &amp;month);
+    switch (month) {
+        case 3:
+        case 4:
+        case 5:
+            printf(&quot;spring\n&quot;);
+            break;
+        case 6:
+        case 7:
+        case 8:
+            printf(&quot;summer\n&quot;);
+            break;
+        case 9:
+        case 10:
+        case 11:
+            printf(&quot;autumn\n&quot;);
+            break;
+        case 12:
+        case 1:
+        case 2:
+            printf(&quot;winter\n&quot;);
+            break;
+        default:
+            printf(&quot;input error\n&quot;);
+            break;
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-90" aria-label="No. 90の問題へ">問題</a>
+          <a href="#answer-90" aria-label="No. 90の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-91" data-group="switch" data-search="91 switchで月の日数 月を整数で入力させ、その月の日数を表示するプログラムを `switch` 文で作成せよ。2月は28日としてよい。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int month;
+    scanf(&quot;%d&quot;, &amp;month);
+    switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            printf(&quot;30\n&quot;);
+            break;
+        case 2:
+            printf(&quot;28\n&quot;);
+            break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            printf(&quot;31\n&quot;);
+            break;
+        default:
+            printf(&quot;input error\n&quot;);
+            break;
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 91</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで月の日数</h3>
+        <p>月を整数で入力させ、その月の日数を表示するプログラムを <code>switch</code> 文で作成せよ。2月は28日としてよい。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int month;
+    scanf(&quot;%d&quot;, &amp;month);
+    switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            printf(&quot;30\n&quot;);
+            break;
+        case 2:
+            printf(&quot;28\n&quot;);
+            break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            printf(&quot;31\n&quot;);
+            break;
+        default:
+            printf(&quot;input error\n&quot;);
+            break;
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-91" aria-label="No. 91の問題へ">問題</a>
+          <a href="#answer-91" aria-label="No. 91の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-92" data-group="switch" data-search="92 switchで曜日 日にちを整数で入力させ、7で割った余りを使って曜日を表示するプログラムを `switch` 文で作成せよ。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int day;
+    scanf(&quot;%d&quot;, &amp;day);
+    switch (day % 7) {
+        case 0:
+            printf(&quot;sunday\n&quot;);
+            break;
+        case 1:
+            printf(&quot;monday\n&quot;);
+            break;
+        case 2:
+            printf(&quot;tuesday\n&quot;);
+            break;
+        case 3:
+            printf(&quot;wednesday\n&quot;);
+            break;
+        case 4:
+            printf(&quot;thursday\n&quot;);
+            break;
+        case 5:
+            printf(&quot;friday\n&quot;);
+            break;
+        case 6:
+            printf(&quot;saturday\n&quot;);
+            break;
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 92</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで曜日</h3>
+        <p>日にちを整数で入力させ、7で割った余りを使って曜日を表示するプログラムを <code>switch</code> 文で作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int day;
+    scanf(&quot;%d&quot;, &amp;day);
+    switch (day % 7) {
+        case 0:
+            printf(&quot;Sunday\n&quot;);
+            break;
+        case 1:
+            printf(&quot;Monday\n&quot;);
+            break;
+        case 2:
+            printf(&quot;Tuesday\n&quot;);
+            break;
+        case 3:
+            printf(&quot;Wednesday\n&quot;);
+            break;
+        case 4:
+            printf(&quot;Thursday\n&quot;);
+            break;
+        case 5:
+            printf(&quot;Friday\n&quot;);
+            break;
+        case 6:
+            printf(&quot;Saturday\n&quot;);
+            break;
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-92" aria-label="No. 92の問題へ">問題</a>
+          <a href="#answer-92" aria-label="No. 92の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-93" data-group="switch" data-search="93 メニュー `1: start`, `2: help`, `3: end` のメニューを表示し、入力された番号に応じてメッセージを表示するプログラムを `switch` 文で作成せよ。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+int main(void) {
+    int menu;
+    printf(&quot;1: start\n&quot;);
+    printf(&quot;2: help\n&quot;);
+    printf(&quot;3: end\n&quot;);
+    scanf(&quot;%d&quot;, &amp;menu);
+    switch (menu) {
+        case 1:
+            printf(&quot;start\n&quot;);
+            break;
+        case 2:
+            printf(&quot;help\n&quot;);
+            break;
+        case 3:
+            printf(&quot;end\n&quot;);
+            break;
+        default:
+            printf(&quot;input error\n&quot;);
+            break;
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 93</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>メニュー</h3>
+        <p><code>1: start</code>, <code>2: help</code>, <code>3: end</code> のメニューを表示し、入力された番号に応じてメッセージを表示するプログラムを <code>switch</code> 文で作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int menu;
+    printf(&quot;1: start\n&quot;);
+    printf(&quot;2: help\n&quot;);
+    printf(&quot;3: end\n&quot;);
+    scanf(&quot;%d&quot;, &amp;menu);
+    switch (menu) {
+        case 1:
+            printf(&quot;start\n&quot;);
+            break;
+        case 2:
+            printf(&quot;help\n&quot;);
+            break;
+        case 3:
+            printf(&quot;end\n&quot;);
+            break;
+        default:
+            printf(&quot;input error\n&quot;);
+            break;
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-93" aria-label="No. 93の問題へ">問題</a>
+          <a href="#answer-93" aria-label="No. 93の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-94" data-group="switch" data-search="94 盤面表示 5行5列の盤面を `-` で表示し、指定した座標だけ `*` にして表示する関数 `show_stage` を作成せよ。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+void show_stage(int x, int y) {
+    for (int i = 0; i &lt; 5; i++) {
+        for (int j = 0; j &lt; 5; j++) {
+            if (i == y &amp;&amp; j == x) {
+                printf(&quot;*&quot;);
+            } else {
+                printf(&quot;-&quot;);
+            }
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+int main(void) {
+    int x, y;
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    show_stage(x, y);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 94</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>盤面表示</h3>
+        <p>5行5列の盤面を <code>-</code> で表示し、指定した座標だけ <code>*</code> にして表示する関数 <code>show_stage</code> を作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+void show_stage(int x, int y) {
+    for (int i = 0; i &lt; 5; i++) {
+        for (int j = 0; j &lt; 5; j++) {
+            if (i == y &amp;&amp; j == x) {
+                printf(&quot;*&quot;);
+            } else {
+                printf(&quot;-&quot;);
+            }
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+int main(void) {
+    int x, y;
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    show_stage(x, y);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-94" aria-label="No. 94の問題へ">問題</a>
+          <a href="#answer-94" aria-label="No. 94の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-95" data-group="switch" data-search="95 移動ゲーム 5行5列の盤面上で、プレイヤーの位置を上下左右に動かすプログラムを作成せよ。盤面の外に出たら `game over` と表示して終了すること。 switch switch / 盤面 #include &lt;stdio.h&gt;
+
+void show_stage(int x, int y) {
+    for (int i = 0; i &lt; 5; i++) {
+        for (int j = 0; j &lt; 5; j++) {
+            if (i == y &amp;&amp; j == x) {
+                printf(&quot;*&quot;);
+            } else {
+                printf(&quot;-&quot;);
+            }
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+int main(void) {
+    int x = 2;
+    int y = 2;
+    char command;
+    while (1) {
+        show_stage(x, y);
+        scanf(&quot; %c&quot;, &amp;command);
+        if (command == 'w') {
+            y--;
+        } else if (command == 's') {
+            y++;
+        } else if (command == 'a') {
+            x--;
+        } else if (command == 'd') {
+            x++;
+        }
+        if (x &lt; 0 || x &gt;= 5 || y &lt; 0 || y &gt;= 5) {
+            printf(&quot;game over\n&quot;);
+            break;
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 95</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>移動ゲーム</h3>
+        <p>5行5列の盤面上で、プレイヤーの位置を上下左右に動かすプログラムを作成せよ。盤面の外に出たら <code>GAME OVER</code> と表示して終了すること。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+
+void show_stage(int x, int y) {
+    for (int i = 0; i &lt; 5; i++) {
+        for (int j = 0; j &lt; 5; j++) {
+            if (i == y &amp;&amp; j == x) {
+                printf(&quot;*&quot;);
+            } else {
+                printf(&quot;-&quot;);
+            }
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+int main(void) {
+    int x = 2;
+    int y = 2;
+    char command;
+    while (1) {
+        show_stage(x, y);
+        scanf(&quot; %c&quot;, &amp;command);
+        if (command == 'w') {
+            y--;
+        } else if (command == 's') {
+            y++;
+        } else if (command == 'a') {
+            x--;
+        } else if (command == 'd') {
+            x++;
+        }
+        if (x &lt; 0 || x &gt;= 5 || y &lt; 0 || y &gt;= 5) {
+            printf(&quot;GAME OVER\n&quot;);
+            break;
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-95" aria-label="No. 95の問題へ">問題</a>
+          <a href="#answer-95" aria-label="No. 95の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-96" data-group="ゲーム" data-search="96 乱数3回 `rand` 関数を使って乱数を3回表示するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム #include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    srand((unsigned int)time(null));
+    for (int i = 0; i &lt; 3; i++) {
+        printf(&quot;%d\n&quot;, rand());
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 96</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>乱数3回</h3>
+        <p><code>rand</code> 関数を使って乱数を3回表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    srand((unsigned int)time(NULL));
+    for (int i = 0; i &lt; 3; i++) {
+        printf(&quot;%d\n&quot;, rand());
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-96" aria-label="No. 96の問題へ">問題</a>
+          <a href="#answer-96" aria-label="No. 96の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-97" data-group="ゲーム" data-search="97 サイコロ 1から6までの乱数を作り、サイコロの目として表示するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム #include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    srand((unsigned int)time(null));
+    printf(&quot;%d\n&quot;, rand() % 6 + 1);
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 97</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>サイコロ</h3>
+        <p>1から6までの乱数を作り、サイコロの目として表示するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    srand((unsigned int)time(NULL));
+    printf(&quot;%d\n&quot;, rand() % 6 + 1);
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-97" aria-label="No. 97の問題へ">問題</a>
+          <a href="#answer-97" aria-label="No. 97の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-98" data-group="ゲーム" data-search="98 連続サイコロ サイコロを繰り返し振り、同じ目が2回連続で出たら終了するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム #include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    int prev = 0;
+    int dice;
+    srand((unsigned int)time(null));
+    while (1) {
+        dice = rand() % 6 + 1;
+        printf(&quot;%d\n&quot;, dice);
+        if (dice == prev) {
+            break;
+        }
+        prev = dice;
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 98</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>連続サイコロ</h3>
+        <p>サイコロを繰り返し振り、同じ目が2回連続で出たら終了するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    int prev = 0;
+    int dice;
+    srand((unsigned int)time(NULL));
+    while (1) {
+        dice = rand() % 6 + 1;
+        printf(&quot;%d\n&quot;, dice);
+        if (dice == prev) {
+            break;
+        }
+        prev = dice;
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-98" aria-label="No. 98の問題へ">問題</a>
+          <a href="#answer-98" aria-label="No. 98の回答へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="answer-card" id="answer-99" data-group="ゲーム" data-search="99 数当てゲーム 1から100までの乱数を正解として作り、プレイヤーに最大7回まで予想を入力させる。正解より小さければ `larger`、大きければ `smaller`、正解なら `correct` と表示して終了するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム #include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    int answer, guess;
+    srand((unsigned int)time(null));
+    answer = rand() % 100 + 1;
+    for (int i = 0; i &lt; 7; i++) {
+        scanf(&quot;%d&quot;, &amp;guess);
+        if (guess &lt; answer) {
+            printf(&quot;larger\n&quot;);
+        } else if (guess &gt; answer) {
+            printf(&quot;smaller\n&quot;);
+        } else {
+            printf(&quot;correct\n&quot;);
+            break;
+        }
+    }
+    return 0;
+}">
+        <div class="problem-meta">
+          <span class="problem-number">No. 99</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>数当てゲーム</h3>
+        <p>1から100までの乱数を正解として作り、プレイヤーに最大7回まで予想を入力させる。正解より小さければ <code>larger</code>、大きければ <code>smaller</code>、正解なら <code>correct</code> と表示して終了するプログラムを作成せよ。</p>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main(void) {
+    int answer, guess;
+    srand((unsigned int)time(NULL));
+    answer = rand() % 100 + 1;
+    for (int i = 0; i &lt; 7; i++) {
+        scanf(&quot;%d&quot;, &amp;guess);
+        if (guess &lt; answer) {
+            printf(&quot;larger\n&quot;);
+        } else if (guess &gt; answer) {
+            printf(&quot;smaller\n&quot;);
+        } else {
+            printf(&quot;correct\n&quot;);
+            break;
+        }
+    }
+    return 0;
+}</code></pre>
+        <div class="problem-actions">
+          <a href="./index.html#knock-99" aria-label="No. 99の問題へ">問題</a>
+          <a href="#answer-99" aria-label="No. 99の回答へのリンク">#</a>
+        </div>
+      </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>条件に合う回答がありません。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>基礎プロ 100本ノック 回答コード</span>
+    <span>C / KAMIYAMA MARUGOTO KOSEN STYLE</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

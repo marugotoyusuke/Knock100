@@ -1,0 +1,1711 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基礎プロ 100本ノック</title>
+  <meta name="description" content="C言語の基礎を学ぶための100本ノック。超基礎から乱数ゲームまで段階的に練習できます。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ページ先頭へ">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>KAMIYAMA<br>MARUGOTO<br>KOSEN</span>
+    </a>
+    <nav class="top-nav" aria-label="ページ内ナビゲーション">
+      <a href="#about">概要</a>
+      <a href="#knocks">100本ノック</a>
+      <a href="#usage">使い方</a>
+      <a href="./answers.html">回答コード</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">C LANGUAGE PRACTICE / 01-16</p>
+        <h1 id="page-title">基礎プロ 100本ノック</h1>
+        <p class="lead"><code>01</code> から <code>16</code> までの学習範囲をもとにした、C言語の基礎練習問題集です。超基礎から少しずつ難しくなる順番に並べています。<br>特に指定がない限り、入力値が正しい形式で入力されるものとしてよいです。まずは「動くプログラムを書く」ことを優先してください。</p>
+      </div>
+      <div class="hero-panel" aria-label="問題数と範囲">
+        <span>001</span>
+        <strong>100</strong>
+        <small>KNOCKS</small>
+      </div>
+    </section>
+
+    <section class="overview" id="about" aria-label="学習範囲">
+      <div class="section-heading">
+        <p>STEPS</p>
+        <h2>基礎から順番に積む</h2>
+      </div>
+      <ul class="stats-grid">
+        <li><span>超基礎</span><strong>20</strong><small>表示・変数・計算・入力</small></li>
+<li><span>条件分岐</span><strong>10</strong><small>if / else</small></li>
+<li><span>繰り返し</span><strong>30</strong><small>for / while / 図形 / 素数</small></li>
+<li><span>配列</span><strong>10</strong><small>配列・2次元配列</small></li>
+<li><span>文字列</span><strong>8</strong><small>char配列</small></li>
+<li><span>関数</span><strong>11</strong><small>引数・戻り値</small></li>
+<li><span>switch</span><strong>7</strong><small>switch / 盤面</small></li>
+<li><span>ゲーム</span><strong>4</strong><small>乱数・ミニゲーム</small></li>
+      </ul>
+    </section>
+
+    <section class="usage" id="usage" aria-labelledby="usage-title">
+      <div class="section-heading">
+        <p>HOW TO USE</p>
+        <h2 id="usage-title">使い方</h2>
+      </div>
+      <ol>
+        <li>各問題は <code>knock00.c</code> から <code>knock99.c</code> のようなファイル名で作成する。</li>
+<li>コンパイル例: <code>gcc knock00.c -o knock00</code></li>
+<li>実行例: <code>./knock00</code></li>
+<li>表示文は完全一致でなくてもよいが、結果が分かるように表示する。</li>
+      </ol>
+    </section>
+
+    <section class="workspace" id="knocks" aria-labelledby="knocks-title">
+      <aside class="control-panel">
+        <div>
+          <p class="panel-label">PROGRESS</p>
+          <strong><span id="done-count">0</span> / 100</strong>
+          <progress id="progress" value="0" max="100"></progress>
+        </div>
+        <div>
+          <label class="panel-label" for="search">SEARCH</label>
+          <input id="search" type="search" placeholder="例: 配列, while, No. 52">
+        </div>
+        <div class="filters" aria-label="カテゴリで絞り込み">
+          <button class="filter-button active" type="button" data-filter="all"><span>すべて</span><small>100問</small></button>
+          <button class="filter-button" type="button" data-filter="超基礎"><span>超基礎</span><small>表示・変数・計算・入力</small></button>
+<button class="filter-button" type="button" data-filter="条件分岐"><span>条件分岐</span><small>if / else</small></button>
+<button class="filter-button" type="button" data-filter="繰り返し"><span>繰り返し</span><small>for / while / 図形 / 素数</small></button>
+<button class="filter-button" type="button" data-filter="配列"><span>配列</span><small>配列・2次元配列</small></button>
+<button class="filter-button" type="button" data-filter="文字列"><span>文字列</span><small>char配列</small></button>
+<button class="filter-button" type="button" data-filter="関数"><span>関数</span><small>引数・戻り値</small></button>
+<button class="filter-button" type="button" data-filter="switch"><span>switch</span><small>switch / 盤面</small></button>
+<button class="filter-button" type="button" data-filter="ゲーム"><span>ゲーム</span><small>乱数・ミニゲーム</small></button>
+        </div>
+      </aside>
+
+      <div class="problem-area">
+        <div class="section-heading">
+          <p>PROBLEMS</p>
+          <h2 id="knocks-title">100本ノック</h2>
+        </div>
+        <div class="problem-grid">
+          
+      <article class="problem-card" id="knock-00" data-group="超基礎" data-search="00 hello 実行すると `hello, world!` と1行表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 00</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>Hello</h3>
+        <p>実行すると <code>Hello, World!</code> と1行表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="00">
+            <span>完了</span>
+          </label>
+          <a href="#knock-00" aria-label="No. 00へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-01" data-group="超基礎" data-search="01 2行表示 `hello,` と `c language!` を別々の行に表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 01</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>2行表示</h3>
+        <p><code>Hello,</code> と <code>C language!</code> を別々の行に表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="01">
+            <span>完了</span>
+          </label>
+          <a href="#knock-01" aria-label="No. 01へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-02" data-group="超基礎" data-search="02 自己紹介 自分の名前、学年、好きなものをそれぞれ1行ずつ表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 02</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>自己紹介</h3>
+        <p>自分の名前、学年、好きなものをそれぞれ1行ずつ表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="02">
+            <span>完了</span>
+          </label>
+          <a href="#knock-02" aria-label="No. 02へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-03" data-group="超基礎" data-search="03 タブ区切り `商品名` と `価格` をタブでそろえて3行表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 03</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>タブ区切り</h3>
+        <p><code>商品名</code> と <code>価格</code> をタブでそろえて3行表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="03">
+            <span>完了</span>
+          </label>
+          <a href="#knock-03" aria-label="No. 03へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-04" data-group="超基礎" data-search="04 整数の表示 整数 `2026` を変数に代入し、その値を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 04</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>整数の表示</h3>
+        <p>整数 <code>2026</code> を変数に代入し、その値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="04">
+            <span>完了</span>
+          </label>
+          <a href="#knock-04" aria-label="No. 04へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-05" data-group="超基礎" data-search="05 足し算 `15 + 27` の計算結果を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 05</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>足し算</h3>
+        <p><code>15 + 27</code> の計算結果を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="05">
+            <span>完了</span>
+          </label>
+          <a href="#knock-05" aria-label="No. 05へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-06" data-group="超基礎" data-search="06 四則演算 `20` と `6` の和、差、積、商、余りをそれぞれ表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 06</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>四則演算</h3>
+        <p><code>20</code> と <code>6</code> の和、差、積、商、余りをそれぞれ表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="06">
+            <span>完了</span>
+          </label>
+          <a href="#knock-06" aria-label="No. 06へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-07" data-group="超基礎" data-search="07 小数の計算 `10.0 / 3.0` の結果を小数第2位まで表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 07</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>小数の計算</h3>
+        <p><code>10.0 / 3.0</code> の結果を小数第2位まで表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="07">
+            <span>完了</span>
+          </label>
+          <a href="#knock-07" aria-label="No. 07へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-08" data-group="超基礎" data-search="08 円の面積 半径 `5.0` の円の面積を求めて表示するプログラムを作成せよ。ただし円周率は `3.14` とする。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 08</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>円の面積</h3>
+        <p>半径 <code>5.0</code> の円の面積を求めて表示するプログラムを作成せよ。ただし円周率は <code>3.14</code> とする。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="08">
+            <span>完了</span>
+          </label>
+          <a href="#knock-08" aria-label="No. 08へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-09" data-group="超基礎" data-search="09 消費税 定価 `1200` 円の商品について、税込価格を表示するプログラムを作成せよ。税率は10%とする。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 09</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>消費税</h3>
+        <p>定価 <code>1200</code> 円の商品について、税込価格を表示するプログラムを作成せよ。税率は10%とする。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="09">
+            <span>完了</span>
+          </label>
+          <a href="#knock-09" aria-label="No. 09へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-10" data-group="超基礎" data-search="10 入力した整数 整数を1つ入力させ、その値を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 10</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>入力した整数</h3>
+        <p>整数を1つ入力させ、その値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="10">
+            <span>完了</span>
+          </label>
+          <a href="#knock-10" aria-label="No. 10へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-11" data-group="超基礎" data-search="11 入力した小数 小数を1つ入力させ、その値を小数第1位まで表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 11</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>入力した小数</h3>
+        <p>小数を1つ入力させ、その値を小数第1位まで表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="11">
+            <span>完了</span>
+          </label>
+          <a href="#knock-11" aria-label="No. 11へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-12" data-group="超基礎" data-search="12 入力値の2倍 整数を1つ入力させ、その値の2倍を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 12</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>入力値の2倍</h3>
+        <p>整数を1つ入力させ、その値の2倍を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="12">
+            <span>完了</span>
+          </label>
+          <a href="#knock-12" aria-label="No. 12へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-13" data-group="超基礎" data-search="13 2つの整数の和 整数を2つ入力させ、それらの和を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 13</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>2つの整数の和</h3>
+        <p>整数を2つ入力させ、それらの和を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="13">
+            <span>完了</span>
+          </label>
+          <a href="#knock-13" aria-label="No. 13へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-14" data-group="超基礎" data-search="14 長方形の面積 縦と横の長さを整数で入力させ、長方形の面積を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 14</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>長方形の面積</h3>
+        <p>縦と横の長さを整数で入力させ、長方形の面積を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="14">
+            <span>完了</span>
+          </label>
+          <a href="#knock-14" aria-label="No. 14へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-15" data-group="超基礎" data-search="15 三角形の面積 底辺と高さを小数で入力させ、三角形の面積を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 15</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>三角形の面積</h3>
+        <p>底辺と高さを小数で入力させ、三角形の面積を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="15">
+            <span>完了</span>
+          </label>
+          <a href="#knock-15" aria-label="No. 15へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-16" data-group="超基礎" data-search="16 割り算と余り 整数を2つ入力させ、1つ目を2つ目で割った商と余りを表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 16</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>割り算と余り</h3>
+        <p>整数を2つ入力させ、1つ目を2つ目で割った商と余りを表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="16">
+            <span>完了</span>
+          </label>
+          <a href="#knock-16" aria-label="No. 16へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-17" data-group="超基礎" data-search="17 桁の取り出し 3桁の整数を入力させ、100の位、10の位、1の位をそれぞれ表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 17</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>桁の取り出し</h3>
+        <p>3桁の整数を入力させ、100の位、10の位、1の位をそれぞれ表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="17">
+            <span>完了</span>
+          </label>
+          <a href="#knock-17" aria-label="No. 17へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-18" data-group="超基礎" data-search="18 割引価格 定価を整数で入力させ、1割引、3割引、5割引の価格を表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 18</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>割引価格</h3>
+        <p>定価を整数で入力させ、1割引、3割引、5割引の価格を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="18">
+            <span>完了</span>
+          </label>
+          <a href="#knock-18" aria-label="No. 18へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-19" data-group="超基礎" data-search="19 通貨換算 日本円を整数で入力させ、1ドル150円としてドルに換算した金額を小数第2位まで表示するプログラムを作成せよ。 超基礎 表示・変数・計算・入力">
+        <div class="problem-meta">
+          <span class="problem-number">No. 19</span>
+          <span class="problem-group">超基礎</span>
+        </div>
+        <h3>通貨換算</h3>
+        <p>日本円を整数で入力させ、1ドル150円としてドルに換算した金額を小数第2位まで表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="19">
+            <span>完了</span>
+          </label>
+          <a href="#knock-19" aria-label="No. 19へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-20" data-group="条件分岐" data-search="20 0判定 整数を1つ入力させ、0なら `zero` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 20</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>0判定</h3>
+        <p>整数を1つ入力させ、0なら <code>zero</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="20">
+            <span>完了</span>
+          </label>
+          <a href="#knock-20" aria-label="No. 20へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-21" data-group="条件分岐" data-search="21 正の数判定 整数を1つ入力させ、正の数なら `positive` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 21</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>正の数判定</h3>
+        <p>整数を1つ入力させ、正の数なら <code>positive</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="21">
+            <span>完了</span>
+          </label>
+          <a href="#knock-21" aria-label="No. 21へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-22" data-group="条件分岐" data-search="22 偶数判定 整数を1つ入力させ、偶数なら `even` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 22</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>偶数判定</h3>
+        <p>整数を1つ入力させ、偶数なら <code>even</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="22">
+            <span>完了</span>
+          </label>
+          <a href="#knock-22" aria-label="No. 22へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-23" data-group="条件分岐" data-search="23 偶数・奇数 整数を1つ入力させ、偶数なら `even`、奇数なら `odd` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 23</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>偶数・奇数</h3>
+        <p>整数を1つ入力させ、偶数なら <code>even</code>、奇数なら <code>odd</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="23">
+            <span>完了</span>
+          </label>
+          <a href="#knock-23" aria-label="No. 23へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-24" data-group="条件分岐" data-search="24 合否判定 点数を入力させ、60点以上なら `pass`、60点未満なら `fail` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 24</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>合否判定</h3>
+        <p>点数を入力させ、60点以上なら <code>pass</code>、60点未満なら <code>fail</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="24">
+            <span>完了</span>
+          </label>
+          <a href="#knock-24" aria-label="No. 24へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-25" data-group="条件分岐" data-search="25 三段階判定 点数を入力させ、80点以上なら `great`、60点以上80点未満なら `pass`、60点未満なら `fail` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 25</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>三段階判定</h3>
+        <p>点数を入力させ、80点以上なら <code>great</code>、60点以上80点未満なら <code>pass</code>、60点未満なら <code>fail</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="25">
+            <span>完了</span>
+          </label>
+          <a href="#knock-25" aria-label="No. 25へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-26" data-group="条件分岐" data-search="26 最大値 整数を2つ入力させ、大きい方の値を表示するプログラムを作成せよ。同じ値の場合はどちらか一方を表示すればよい。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 26</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>最大値</h3>
+        <p>整数を2つ入力させ、大きい方の値を表示するプログラムを作成せよ。同じ値の場合はどちらか一方を表示すればよい。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="26">
+            <span>完了</span>
+          </label>
+          <a href="#knock-26" aria-label="No. 26へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-27" data-group="条件分岐" data-search="27 絶対値 整数を1つ入力させ、その絶対値を表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 27</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>絶対値</h3>
+        <p>整数を1つ入力させ、その絶対値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="27">
+            <span>完了</span>
+          </label>
+          <a href="#knock-27" aria-label="No. 27へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-28" data-group="条件分岐" data-search="28 範囲判定 整数を1つ入力させ、その値が10以上20以下なら `ok`、それ以外なら `ng` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 28</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>範囲判定</h3>
+        <p>整数を1つ入力させ、その値が10以上20以下なら <code>OK</code>、それ以外なら <code>NG</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="28">
+            <span>完了</span>
+          </label>
+          <a href="#knock-28" aria-label="No. 28へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-29" data-group="条件分岐" data-search="29 数当て1回 プログラム内で正解の数を `7` と決めておき、整数を1つ入力させる。入力値が正解より大きければ `smaller`、小さければ `larger`、等しければ `correct` と表示するプログラムを作成せよ。 条件分岐 if / else">
+        <div class="problem-meta">
+          <span class="problem-number">No. 29</span>
+          <span class="problem-group">条件分岐</span>
+        </div>
+        <h3>数当て1回</h3>
+        <p>プログラム内で正解の数を <code>7</code> と決めておき、整数を1つ入力させる。入力値が正解より大きければ <code>smaller</code>、小さければ <code>larger</code>、等しければ <code>correct</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="29">
+            <span>完了</span>
+          </label>
+          <a href="#knock-29" aria-label="No. 29へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-30" data-group="繰り返し" data-search="30 1から10まで 1から10までの整数を1行ずつ表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 30</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1から10まで</h3>
+        <p>1から10までの整数を1行ずつ表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="30">
+            <span>完了</span>
+          </label>
+          <a href="#knock-30" aria-label="No. 30へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-31" data-group="繰り返し" data-search="31 10から1まで 10から1までの整数を1行ずつ表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 31</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>10から1まで</h3>
+        <p>10から1までの整数を1行ずつ表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="31">
+            <span>完了</span>
+          </label>
+          <a href="#knock-31" aria-label="No. 31へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-32" data-group="繰り返し" data-search="32 hello 5回 `hello` を5回表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 32</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>Hello 5回</h3>
+        <p><code>Hello</code> を5回表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="32">
+            <span>完了</span>
+          </label>
+          <a href="#knock-32" aria-label="No. 32へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-33" data-group="繰り返し" data-search="33 指定回数表示 整数を1つ入力させ、その回数だけ `hello` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 33</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>指定回数表示</h3>
+        <p>整数を1つ入力させ、その回数だけ <code>Hello</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="33">
+            <span>完了</span>
+          </label>
+          <a href="#knock-33" aria-label="No. 33へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-34" data-group="繰り返し" data-search="34 1からnまで 整数 `n` を入力させ、1から `n` までの整数を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 34</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1からnまで</h3>
+        <p>整数 <code>n</code> を入力させ、1から <code>n</code> までの整数を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="34">
+            <span>完了</span>
+          </label>
+          <a href="#knock-34" aria-label="No. 34へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-35" data-group="繰り返し" data-search="35 nから0まで 整数 `n` を入力させ、`n` から0までの整数を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 35</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>nから0まで</h3>
+        <p>整数 <code>n</code> を入力させ、<code>n</code> から0までの整数を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="35">
+            <span>完了</span>
+          </label>
+          <a href="#knock-35" aria-label="No. 35へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-36" data-group="繰り返し" data-search="36 1から100までの合計 1から100までの整数の合計を求めて表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 36</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1から100までの合計</h3>
+        <p>1から100までの整数の合計を求めて表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="36">
+            <span>完了</span>
+          </label>
+          <a href="#knock-36" aria-label="No. 36へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-37" data-group="繰り返し" data-search="37 1からnまでの合計 整数 `n` を入力させ、1から `n` までの整数の合計を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 37</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>1からnまでの合計</h3>
+        <p>整数 <code>n</code> を入力させ、1から <code>n</code> までの整数の合計を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="37">
+            <span>完了</span>
+          </label>
+          <a href="#knock-37" aria-label="No. 37へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-38" data-group="繰り返し" data-search="38 n個の合計 最初に個数 `n` を入力させ、その後に整数を `n` 個入力させる。入力された整数の合計を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 38</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>n個の合計</h3>
+        <p>最初に個数 <code>n</code> を入力させ、その後に整数を <code>n</code> 個入力させる。入力された整数の合計を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="38">
+            <span>完了</span>
+          </label>
+          <a href="#knock-38" aria-label="No. 38へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-39" data-group="繰り返し" data-search="39 0で終了 整数を繰り返し入力させ、0が入力されたら終了するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 39</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>0で終了</h3>
+        <p>整数を繰り返し入力させ、0が入力されたら終了するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="39">
+            <span>完了</span>
+          </label>
+          <a href="#knock-39" aria-label="No. 39へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-40" data-group="繰り返し" data-search="40 0までの合計 整数を繰り返し入力させ、0が入力されたら入力を終了する。0より前に入力された値の合計を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 40</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>0までの合計</h3>
+        <p>整数を繰り返し入力させ、0が入力されたら入力を終了する。0より前に入力された値の合計を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="40">
+            <span>完了</span>
+          </label>
+          <a href="#knock-40" aria-label="No. 40へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-41" data-group="繰り返し" data-search="41 7の倍数まで 整数を繰り返し入力させ、入力値の合計が7の倍数になったら合計を表示して終了するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 41</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>7の倍数まで</h3>
+        <p>整数を繰り返し入力させ、入力値の合計が7の倍数になったら合計を表示して終了するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="41">
+            <span>完了</span>
+          </label>
+          <a href="#knock-41" aria-label="No. 41へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-42" data-group="繰り返し" data-search="42 指定回数の平均 最初に個数 `n` を入力させ、その後に整数を `n` 個入力させる。合計と平均を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 42</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>指定回数の平均</h3>
+        <p>最初に個数 <code>n</code> を入力させ、その後に整数を <code>n</code> 個入力させる。合計と平均を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="42">
+            <span>完了</span>
+          </label>
+          <a href="#knock-42" aria-label="No. 42へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-43" data-group="繰り返し" data-search="43 5回の最大値 整数を5回入力させ、その中の最大値を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 43</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>5回の最大値</h3>
+        <p>整数を5回入力させ、その中の最大値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="43">
+            <span>完了</span>
+          </label>
+          <a href="#knock-43" aria-label="No. 43へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-44" data-group="繰り返し" data-search="44 5回の最小値 整数を5回入力させ、その中の最小値を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 44</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>5回の最小値</h3>
+        <p>整数を5回入力させ、その中の最小値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="44">
+            <span>完了</span>
+          </label>
+          <a href="#knock-44" aria-label="No. 44へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-45" data-group="繰り返し" data-search="45 棒グラフ 整数を1つ入力させ、その数だけ `*` を横1行に表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 45</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>棒グラフ</h3>
+        <p>整数を1つ入力させ、その数だけ <code>*</code> を横1行に表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="45">
+            <span>完了</span>
+          </label>
+          <a href="#knock-45" aria-label="No. 45へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-46" data-group="繰り返し" data-search="46 5個ごとに空白 整数を1つ入力させ、その数だけ `*` を表示する。ただし5個ごとに空白を1つ入れるプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 46</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>5個ごとに空白</h3>
+        <p>整数を1つ入力させ、その数だけ <code>*</code> を表示する。ただし5個ごとに空白を1つ入れるプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="46">
+            <span>完了</span>
+          </label>
+          <a href="#knock-46" aria-label="No. 46へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-47" data-group="繰り返し" data-search="47 正方形 整数 `n` を入力させ、`*` を使って縦 `n`、横 `n` の正方形を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 47</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>正方形</h3>
+        <p>整数 <code>n</code> を入力させ、<code>*</code> を使って縦 <code>n</code>、横 <code>n</code> の正方形を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="47">
+            <span>完了</span>
+          </label>
+          <a href="#knock-47" aria-label="No. 47へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-48" data-group="繰り返し" data-search="48 長方形 縦と横の長さを入力させ、`*` を使ってその大きさの長方形を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 48</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>長方形</h3>
+        <p>縦と横の長さを入力させ、<code>*</code> を使ってその大きさの長方形を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="48">
+            <span>完了</span>
+          </label>
+          <a href="#knock-48" aria-label="No. 48へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-49" data-group="繰り返し" data-search="49 右上がり三角形 整数 `n` を入力させ、1行目に1個、2行目に2個、...、`n` 行目に `n` 個の `*` を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 49</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>右上がり三角形</h3>
+        <p>整数 <code>n</code> を入力させ、1行目に1個、2行目に2個、...、<code>n</code> 行目に <code>n</code> 個の <code>*</code> を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="49">
+            <span>完了</span>
+          </label>
+          <a href="#knock-49" aria-label="No. 49へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-50" data-group="繰り返し" data-search="50 右下がり三角形 整数 `n` を入力させ、1行目に `n` 個、2行目に `n - 1` 個、...、最後の行に1個の `*` を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 50</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>右下がり三角形</h3>
+        <p>整数 <code>n</code> を入力させ、1行目に <code>n</code> 個、2行目に <code>n - 1</code> 個、...、最後の行に1個の <code>*</code> を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="50">
+            <span>完了</span>
+          </label>
+          <a href="#knock-50" aria-label="No. 50へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-51" data-group="繰り返し" data-search="51 右寄せ三角形 整数 `n` を入力させ、空白と `*` を使って右寄せの三角形を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 51</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>右寄せ三角形</h3>
+        <p>整数 <code>n</code> を入力させ、空白と <code>*</code> を使って右寄せの三角形を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="51">
+            <span>完了</span>
+          </label>
+          <a href="#knock-51" aria-label="No. 51へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-52" data-group="繰り返し" data-search="52 九九表 1の段から9の段までの九九表を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 52</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>九九表</h3>
+        <p>1の段から9の段までの九九表を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="52">
+            <span>完了</span>
+          </label>
+          <a href="#knock-52" aria-label="No. 52へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-53" data-group="繰り返し" data-search="53 3の倍数 1から50までの整数を表示する。ただし3の倍数のときは数の代わりに `bar` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 53</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>3の倍数</h3>
+        <p>1から50までの整数を表示する。ただし3の倍数のときは数の代わりに <code>bar</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="53">
+            <span>完了</span>
+          </label>
+          <a href="#knock-53" aria-label="No. 53へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-54" data-group="繰り返し" data-search="54 3のつく数 1から50までの整数を表示する。ただし3の倍数、または1の位が3の数のときは数の代わりに `aho` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 54</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>3のつく数</h3>
+        <p>1から50までの整数を表示する。ただし3の倍数、または1の位が3の数のときは数の代わりに <code>aho</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="54">
+            <span>完了</span>
+          </label>
+          <a href="#knock-54" aria-label="No. 54へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-55" data-group="繰り返し" data-search="55 素数判定 整数 `n` を入力させ、`n` が素数なら `prime`、素数でなければ `not prime` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 55</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>素数判定</h3>
+        <p>整数 <code>n</code> を入力させ、<code>n</code> が素数なら <code>prime</code>、素数でなければ <code>not prime</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="55">
+            <span>完了</span>
+          </label>
+          <a href="#knock-55" aria-label="No. 55へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-56" data-group="繰り返し" data-search="56 100までの素数 1から100までの整数について、素数ならその数を表示し、素数でなければ `x` と表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 56</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>100までの素数</h3>
+        <p>1から100までの整数について、素数ならその数を表示し、素数でなければ <code>x</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="56">
+            <span>完了</span>
+          </label>
+          <a href="#knock-56" aria-label="No. 56へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-57" data-group="繰り返し" data-search="57 break 1から10までの整数を順に表示する。ただし5を表示したら繰り返しを終了するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 57</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>break</h3>
+        <p>1から10までの整数を順に表示する。ただし5を表示したら繰り返しを終了するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="57">
+            <span>完了</span>
+          </label>
+          <a href="#knock-57" aria-label="No. 57へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-58" data-group="繰り返し" data-search="58 continue 1から10までの整数を順に表示する。ただし5だけは表示しないプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 58</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>continue</h3>
+        <p>1から10までの整数を順に表示する。ただし5だけは表示しないプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="58">
+            <span>完了</span>
+          </label>
+          <a href="#knock-58" aria-label="No. 58へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-59" data-group="繰り返し" data-search="59 入力制限 10以下の整数が入力されるまで入力を繰り返し、最後に入力された値を表示するプログラムを作成せよ。 繰り返し for / while / 図形 / 素数">
+        <div class="problem-meta">
+          <span class="problem-number">No. 59</span>
+          <span class="problem-group">繰り返し</span>
+        </div>
+        <h3>入力制限</h3>
+        <p>10以下の整数が入力されるまで入力を繰り返し、最後に入力された値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="59">
+            <span>完了</span>
+          </label>
+          <a href="#knock-59" aria-label="No. 59へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-60" data-group="配列" data-search="60 配列の初期化 要素数5の整数配列を作り、`10, 20, 30, 40, 50` を代入して順に表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 60</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の初期化</h3>
+        <p>要素数5の整数配列を作り、<code>10, 20, 30, 40, 50</code> を代入して順に表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="60">
+            <span>完了</span>
+          </label>
+          <a href="#knock-60" aria-label="No. 60へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-61" data-group="配列" data-search="61 配列に入力 要素数5の整数配列を作り、整数を5個入力させ、入力された順に表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 61</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列に入力</h3>
+        <p>要素数5の整数配列を作り、整数を5個入力させ、入力された順に表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="61">
+            <span>完了</span>
+          </label>
+          <a href="#knock-61" aria-label="No. 61へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-62" data-group="配列" data-search="62 配列の合計 要素数5の整数配列に点数を入力させ、合計を表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 62</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の合計</h3>
+        <p>要素数5の整数配列に点数を入力させ、合計を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="62">
+            <span>完了</span>
+          </label>
+          <a href="#knock-62" aria-label="No. 62へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-63" data-group="配列" data-search="63 配列の平均 要素数5の整数配列に点数を入力させ、平均を小数第1位まで表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 63</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の平均</h3>
+        <p>要素数5の整数配列に点数を入力させ、平均を小数第1位まで表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="63">
+            <span>完了</span>
+          </label>
+          <a href="#knock-63" aria-label="No. 63へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-64" data-group="配列" data-search="64 配列の最大値 要素数5の整数配列に値を入力させ、最大値を表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 64</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の最大値</h3>
+        <p>要素数5の整数配列に値を入力させ、最大値を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="64">
+            <span>完了</span>
+          </label>
+          <a href="#knock-64" aria-label="No. 64へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-65" data-group="配列" data-search="65 配列の合否 5人分の点数を配列に入力させ、各点数について60点以上なら `pass`、60点未満なら `fail` と表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 65</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の合否</h3>
+        <p>5人分の点数を配列に入力させ、各点数について60点以上なら <code>pass</code>、60点未満なら <code>fail</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="65">
+            <span>完了</span>
+          </label>
+          <a href="#knock-65" aria-label="No. 65へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-66" data-group="配列" data-search="66 逆順表示 要素数5の整数配列に値を入力させ、入力と逆の順番で表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 66</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>逆順表示</h3>
+        <p>要素数5の整数配列に値を入力させ、入力と逆の順番で表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="66">
+            <span>完了</span>
+          </label>
+          <a href="#knock-66" aria-label="No. 66へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-67" data-group="配列" data-search="67 配列の検索 要素数5の整数配列に値を入力させたあと、探したい値を1つ入力させる。その値が配列の中にあれば `found`、なければ `not found` と表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 67</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>配列の検索</h3>
+        <p>要素数5の整数配列に値を入力させたあと、探したい値を1つ入力させる。その値が配列の中にあれば <code>found</code>、なければ <code>not found</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="67">
+            <span>完了</span>
+          </label>
+          <a href="#knock-67" aria-label="No. 67へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-68" data-group="配列" data-search="68 2次元配列の九九 10行10列の整数配列を用意し、`kuku[i][j]` に `i * j` を入れて、1の段から9の段まで表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 68</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>2次元配列の九九</h3>
+        <p>10行10列の整数配列を用意し、<code>kuku[i][j]</code> に <code>i * j</code> を入れて、1の段から9の段まで表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="68">
+            <span>完了</span>
+          </label>
+          <a href="#knock-68" aria-label="No. 68へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-69" data-group="配列" data-search="69 2教科の成績 6人分の国語と算数の点数を2次元配列に入力させ、各人の合計と平均を表示するプログラムを作成せよ。 配列 配列・2次元配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 69</span>
+          <span class="problem-group">配列</span>
+        </div>
+        <h3>2教科の成績</h3>
+        <p>6人分の国語と算数の点数を2次元配列に入力させ、各人の合計と平均を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="69">
+            <span>完了</span>
+          </label>
+          <a href="#knock-69" aria-label="No. 69へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-70" data-group="文字列" data-search="70 文字列の入力 名前を文字列として入力させ、`hello, 名前` と表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 70</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字列の入力</h3>
+        <p>名前を文字列として入力させ、<code>Hello, 名前</code> と表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="70">
+            <span>完了</span>
+          </label>
+          <a href="#knock-70" aria-label="No. 70へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-71" data-group="文字列" data-search="71 文字の取り出し 文字列を1つ入力させ、先頭の文字と3文字目を表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 71</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字の取り出し</h3>
+        <p>文字列を1つ入力させ、先頭の文字と3文字目を表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="71">
+            <span>完了</span>
+          </label>
+          <a href="#knock-71" aria-label="No. 71へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-72" data-group="文字列" data-search="72 イニシャル 名字と名前を別々の文字列として入力させ、名前の先頭文字と名字の先頭文字を使ってイニシャルを表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 72</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>イニシャル</h3>
+        <p>名字と名前を別々の文字列として入力させ、名前の先頭文字と名字の先頭文字を使ってイニシャルを表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="72">
+            <span>完了</span>
+          </label>
+          <a href="#knock-72" aria-label="No. 72へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-73" data-group="文字列" data-search="73 文字列配列 5個の文字列を入力させ、入力された文字列を順に表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 73</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字列配列</h3>
+        <p>5個の文字列を入力させ、入力された文字列を順に表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="73">
+            <span>完了</span>
+          </label>
+          <a href="#knock-73" aria-label="No. 73へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-74" data-group="文字列" data-search="74 aで始まる文字列 5個の文字列を入力させ、その中から `a` で始まる文字列だけを表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 74</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>aで始まる文字列</h3>
+        <p>5個の文字列を入力させ、その中から <code>a</code> で始まる文字列だけを表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="74">
+            <span>完了</span>
+          </label>
+          <a href="#knock-74" aria-label="No. 74へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-75" data-group="文字列" data-search="75 文字のカウント 5個の文字列を入力させ、すべての文字列に含まれる `o` の数を数えて表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 75</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字のカウント</h3>
+        <p>5個の文字列を入力させ、すべての文字列に含まれる <code>o</code> の数を数えて表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="75">
+            <span>完了</span>
+          </label>
+          <a href="#knock-75" aria-label="No. 75へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-76" data-group="文字列" data-search="76 終端文字まで 文字列を1つ入力させ、先頭から終端文字 `\0` に到達するまで1文字ずつ表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 76</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>終端文字まで</h3>
+        <p>文字列を1つ入力させ、先頭から終端文字 <code>\0</code> に到達するまで1文字ずつ表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="76">
+            <span>完了</span>
+          </label>
+          <a href="#knock-76" aria-label="No. 76へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-77" data-group="文字列" data-search="77 文字変換 文字列を1つ入力させ、文字 `a` は `1`、文字 `b` は `2`、文字 `c` は `3`、それ以外の文字はそのまま表示するプログラムを作成せよ。 文字列 char配列">
+        <div class="problem-meta">
+          <span class="problem-number">No. 77</span>
+          <span class="problem-group">文字列</span>
+        </div>
+        <h3>文字変換</h3>
+        <p>文字列を1つ入力させ、文字 <code>a</code> は <code>1</code>、文字 <code>b</code> は <code>2</code>、文字 <code>c</code> は <code>3</code>、それ以外の文字はそのまま表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="77">
+            <span>完了</span>
+          </label>
+          <a href="#knock-77" aria-label="No. 77へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-78" data-group="関数" data-search="78 関数であいさつ `hello` と表示する関数 `hello` を作り、`main` 関数から呼び出すプログラムを作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 78</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数であいさつ</h3>
+        <p><code>Hello</code> と表示する関数 <code>hello</code> を作り、<code>main</code> 関数から呼び出すプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="78">
+            <span>完了</span>
+          </label>
+          <a href="#knock-78" aria-label="No. 78へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-79" data-group="関数" data-search="79 関数で税込価格 整数の価格を受け取り、税込価格を表示する関数を作成せよ。`main` 関数から価格 `1000` を渡して呼び出すこと。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 79</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で税込価格</h3>
+        <p>整数の価格を受け取り、税込価格を表示する関数を作成せよ。<code>main</code> 関数から価格 <code>1000</code> を渡して呼び出すこと。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="79">
+            <span>完了</span>
+          </label>
+          <a href="#knock-79" aria-label="No. 79へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-80" data-group="関数" data-search="80 関数で合計 2つの整数を受け取り、その和を返す関数 `sum2` を作成せよ。`main` 関数で2つの値を入力させ、戻り値を表示すること。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 80</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で合計</h3>
+        <p>2つの整数を受け取り、その和を返す関数 <code>sum2</code> を作成せよ。<code>main</code> 関数で2つの値を入力させ、戻り値を表示すること。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="80">
+            <span>完了</span>
+          </label>
+          <a href="#knock-80" aria-label="No. 80へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-81" data-group="関数" data-search="81 関数で最大値 2つの整数を受け取り、大きい方を返す関数 `max2` を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 81</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で最大値</h3>
+        <p>2つの整数を受け取り、大きい方を返す関数 <code>max2</code> を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="81">
+            <span>完了</span>
+          </label>
+          <a href="#knock-81" aria-label="No. 81へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-82" data-group="関数" data-search="82 関数で3つの最大値 3つの整数を受け取り、最大値を返す関数 `max3` を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 82</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で3つの最大値</h3>
+        <p>3つの整数を受け取り、最大値を返す関数 <code>max3</code> を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="82">
+            <span>完了</span>
+          </label>
+          <a href="#knock-82" aria-label="No. 82へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-83" data-group="関数" data-search="83 関数で平均 3つの整数を受け取り、平均値を `double` で返す関数 `average3` を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 83</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で平均</h3>
+        <p>3つの整数を受け取り、平均値を <code>double</code> で返す関数 <code>average3</code> を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="83">
+            <span>完了</span>
+          </label>
+          <a href="#knock-83" aria-label="No. 83へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-84" data-group="関数" data-search="84 関数で正方形 整数 `n` を受け取り、`*` で `n` 行 `n` 列の正方形を表示する関数を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 84</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で正方形</h3>
+        <p>整数 <code>n</code> を受け取り、<code>*</code> で <code>n</code> 行 <code>n</code> 列の正方形を表示する関数を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="84">
+            <span>完了</span>
+          </label>
+          <a href="#knock-84" aria-label="No. 84へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-85" data-group="関数" data-search="85 関数で合計1からn 整数 `n` を受け取り、1から `n` までの合計を返す関数を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 85</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で合計1からn</h3>
+        <p>整数 <code>n</code> を受け取り、1から <code>n</code> までの合計を返す関数を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="85">
+            <span>完了</span>
+          </label>
+          <a href="#knock-85" aria-label="No. 85へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-86" data-group="関数" data-search="86 関数で入力制限 最大値 `max` を受け取り、`max` 以下の整数が入力されるまで入力を繰り返し、入力された値を返す関数を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 86</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で入力制限</h3>
+        <p>最大値 <code>max</code> を受け取り、<code>max</code> 以下の整数が入力されるまで入力を繰り返し、入力された値を返す関数を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="86">
+            <span>完了</span>
+          </label>
+          <a href="#knock-86" aria-label="No. 86へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-87" data-group="関数" data-search="87 関数で絶対値 整数を受け取り、その絶対値を返す関数を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 87</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で絶対値</h3>
+        <p>整数を受け取り、その絶対値を返す関数を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="87">
+            <span>完了</span>
+          </label>
+          <a href="#knock-87" aria-label="No. 87へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-88" data-group="関数" data-search="88 関数で四則演算 2つの整数と演算子1文字を受け取り、`+`, `-`, `*`, `/` に応じて計算結果を表示する関数を作成せよ。 関数 引数・戻り値">
+        <div class="problem-meta">
+          <span class="problem-number">No. 88</span>
+          <span class="problem-group">関数</span>
+        </div>
+        <h3>関数で四則演算</h3>
+        <p>2つの整数と演算子1文字を受け取り、<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> に応じて計算結果を表示する関数を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="88">
+            <span>完了</span>
+          </label>
+          <a href="#knock-88" aria-label="No. 88へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-89" data-group="switch" data-search="89 switchで余り 整数を1つ入力させ、3で割った余りが0なら `remainder 0`、1なら `remainder 1`、2なら `remainder 2` と `switch` 文で表示するプログラムを作成せよ。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 89</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで余り</h3>
+        <p>整数を1つ入力させ、3で割った余りが0なら <code>remainder 0</code>、1なら <code>remainder 1</code>、2なら <code>remainder 2</code> と <code>switch</code> 文で表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="89">
+            <span>完了</span>
+          </label>
+          <a href="#knock-89" aria-label="No. 89へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-90" data-group="switch" data-search="90 switchで季節 月を整数で入力させ、3から5なら春、6から8なら夏、9から11なら秋、12, 1, 2なら冬、それ以外なら入力ミスと表示するプログラムを `switch` 文で作成せよ。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 90</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで季節</h3>
+        <p>月を整数で入力させ、3から5なら春、6から8なら夏、9から11なら秋、12, 1, 2なら冬、それ以外なら入力ミスと表示するプログラムを <code>switch</code> 文で作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="90">
+            <span>完了</span>
+          </label>
+          <a href="#knock-90" aria-label="No. 90へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-91" data-group="switch" data-search="91 switchで月の日数 月を整数で入力させ、その月の日数を表示するプログラムを `switch` 文で作成せよ。2月は28日としてよい。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 91</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで月の日数</h3>
+        <p>月を整数で入力させ、その月の日数を表示するプログラムを <code>switch</code> 文で作成せよ。2月は28日としてよい。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="91">
+            <span>完了</span>
+          </label>
+          <a href="#knock-91" aria-label="No. 91へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-92" data-group="switch" data-search="92 switchで曜日 日にちを整数で入力させ、7で割った余りを使って曜日を表示するプログラムを `switch` 文で作成せよ。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 92</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>switchで曜日</h3>
+        <p>日にちを整数で入力させ、7で割った余りを使って曜日を表示するプログラムを <code>switch</code> 文で作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="92">
+            <span>完了</span>
+          </label>
+          <a href="#knock-92" aria-label="No. 92へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-93" data-group="switch" data-search="93 メニュー `1: start`, `2: help`, `3: end` のメニューを表示し、入力された番号に応じてメッセージを表示するプログラムを `switch` 文で作成せよ。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 93</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>メニュー</h3>
+        <p><code>1: start</code>, <code>2: help</code>, <code>3: end</code> のメニューを表示し、入力された番号に応じてメッセージを表示するプログラムを <code>switch</code> 文で作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="93">
+            <span>完了</span>
+          </label>
+          <a href="#knock-93" aria-label="No. 93へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-94" data-group="switch" data-search="94 盤面表示 5行5列の盤面を `-` で表示し、指定した座標だけ `*` にして表示する関数 `show_stage` を作成せよ。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 94</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>盤面表示</h3>
+        <p>5行5列の盤面を <code>-</code> で表示し、指定した座標だけ <code>*</code> にして表示する関数 <code>show_stage</code> を作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="94">
+            <span>完了</span>
+          </label>
+          <a href="#knock-94" aria-label="No. 94へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-95" data-group="switch" data-search="95 移動ゲーム 5行5列の盤面上で、プレイヤーの位置を上下左右に動かすプログラムを作成せよ。盤面の外に出たら `game over` と表示して終了すること。 switch switch / 盤面">
+        <div class="problem-meta">
+          <span class="problem-number">No. 95</span>
+          <span class="problem-group">switch</span>
+        </div>
+        <h3>移動ゲーム</h3>
+        <p>5行5列の盤面上で、プレイヤーの位置を上下左右に動かすプログラムを作成せよ。盤面の外に出たら <code>GAME OVER</code> と表示して終了すること。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="95">
+            <span>完了</span>
+          </label>
+          <a href="#knock-95" aria-label="No. 95へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-96" data-group="ゲーム" data-search="96 乱数3回 `rand` 関数を使って乱数を3回表示するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム">
+        <div class="problem-meta">
+          <span class="problem-number">No. 96</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>乱数3回</h3>
+        <p><code>rand</code> 関数を使って乱数を3回表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="96">
+            <span>完了</span>
+          </label>
+          <a href="#knock-96" aria-label="No. 96へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-97" data-group="ゲーム" data-search="97 サイコロ 1から6までの乱数を作り、サイコロの目として表示するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム">
+        <div class="problem-meta">
+          <span class="problem-number">No. 97</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>サイコロ</h3>
+        <p>1から6までの乱数を作り、サイコロの目として表示するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="97">
+            <span>完了</span>
+          </label>
+          <a href="#knock-97" aria-label="No. 97へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-98" data-group="ゲーム" data-search="98 連続サイコロ サイコロを繰り返し振り、同じ目が2回連続で出たら終了するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム">
+        <div class="problem-meta">
+          <span class="problem-number">No. 98</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>連続サイコロ</h3>
+        <p>サイコロを繰り返し振り、同じ目が2回連続で出たら終了するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="98">
+            <span>完了</span>
+          </label>
+          <a href="#knock-98" aria-label="No. 98へのリンク">#</a>
+        </div>
+      </article>
+
+      <article class="problem-card" id="knock-99" data-group="ゲーム" data-search="99 数当てゲーム 1から100までの乱数を正解として作り、プレイヤーに最大7回まで予想を入力させる。正解より小さければ `larger`、大きければ `smaller`、正解なら `correct` と表示して終了するプログラムを作成せよ。 ゲーム 乱数・ミニゲーム">
+        <div class="problem-meta">
+          <span class="problem-number">No. 99</span>
+          <span class="problem-group">ゲーム</span>
+        </div>
+        <h3>数当てゲーム</h3>
+        <p>1から100までの乱数を正解として作り、プレイヤーに最大7回まで予想を入力させる。正解より小さければ <code>larger</code>、大きければ <code>smaller</code>、正解なら <code>correct</code> と表示して終了するプログラムを作成せよ。</p>
+        <div class="problem-actions">
+          <label class="check-label">
+            <input type="checkbox" data-check="99">
+            <span>完了</span>
+          </label>
+          <a href="#knock-99" aria-label="No. 99へのリンク">#</a>
+        </div>
+      </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>条件に合う問題がありません。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>基礎プロ 100本ノック</span>
+    <span>C / KAMIYAMA MARUGOTO KOSEN STYLE</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
